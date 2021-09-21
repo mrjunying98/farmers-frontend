@@ -92,18 +92,18 @@ const Home: React.FC = () => {
 
   return (
     <Page>
-       {/* <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >
-          {TranslateString(999, 'Yield Farming starts at block #19070000')}
-        </Heading>
-        <Text color="#FFFFFF" >{TranslateString(999, 'But you can already stake your tokens!')}
-        </Text>
-      <Timer /> */}
-        <Heading as="h1" size="lg" mb="12px" color="#fb3321" >
+         <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >
+          {TranslateString(999, 'Yield Farming starts at block #IDK')}
+          </Heading>
+         <Text color="#FFFFFF" >{TranslateString(999, 'But you can already stake your tokens!')}
+         </Text>
+          <Timer />
+        {/* <Heading as="h1" size="lg" mb="12px" color="#fb3321" >
           {TranslateString(999, 'Yield Farming started!')}
         </Heading>
         <Heading as="h1" size="sm" mb="27px" color="#fb3321" >
           {TranslateString(999, 'At block #19070000')}
-        </Heading>
+        </Heading> */}
       <Hero>
         {/* <Heading as="h1" size="xxl" mb="15px" color="#FFFFFF" >
           {TranslateString(576, 'FarmersOnly Finance')}
