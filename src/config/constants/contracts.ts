@@ -22,6 +22,9 @@ export default {
   usdc: {
     43114: '0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664'
   },
+  usdt: {
+    43114: '0xc7198437980c041c805A1EDcbA50c1Ce5db95118'
+  },
   wavax: {
     43114: '0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7'
   },
