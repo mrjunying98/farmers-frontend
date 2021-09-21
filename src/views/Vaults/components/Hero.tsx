@@ -30,7 +30,7 @@ const Hero = () => {
     <StyledHero>
       <Container>
         <Title>{TranslateString(500, 'Corn Vaults')}</Title>
-        <Blurb>{TranslateString(502, 'Yield Auto-compounding, as powerful as a G9')}</Blurb>
+        <Blurb>{TranslateString(502, 'Yield Auto-compounding, as powerful as two farmers in love!')}</Blurb>
       </Container>
     </StyledHero>
   )
