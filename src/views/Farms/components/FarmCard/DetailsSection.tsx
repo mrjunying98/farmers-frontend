@@ -67,7 +67,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
     ? `$${Number(new BigNumber(totalValueFormated).times(15.097**3)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 	
-	const totalValueCORNWMATIC = totalValueFormated
+	const totalValueCORNWAVAX = totalValueFormated
     ? `$${Number(new BigNumber(totalValueFormated).times(1.346)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
@@ -105,7 +105,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   )
 } 
 
-  if (lpLabel === 'CORN-WMATIC LP') {
+  if (lpLabel === 'CORN-WAVAX LP') {
     
   return (
     <Wrapper>
@@ -120,7 +120,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
       {!removed && (
         <Flex justifyContent="space-between">
           <Text color="#FFFFFF">{TranslateString(23, 'Total Liquidity')}:</Text>
-          <Text color="#FFFFFF">{totalValueCORNWMATIC}</Text>
+          <Text color="#FFFFFF">{totalValueCORNWAVAX}</Text>
         </Flex>
       )}
       <Flex justifyContent="flex-start">

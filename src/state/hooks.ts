@@ -69,7 +69,7 @@ export const usePoolFromPid = (sousId): Pool => {
 // Prices
 
 export const usePriceBnbBusd = (): BigNumber => {
-  const pid = 8; // WMATIC-USDC LP : DEFAULT 8
+  const pid = 8; // WAVAX-USDC LP : DEFAULT 8
   const farm = useFarmFromPid(pid)
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
 }
@@ -99,7 +99,7 @@ export const useTotalValue = (): BigNumber => {
       if (farm.pid === 13) {
         value = value.plus(bnbPrice.times(farm.lpTotalInQuoteToken).times(13.672**3));
       }
-      else if (farm.quoteTokenSymbol === QuoteToken.WMATIC) {
+      else if (farm.quoteTokenSymbol === QuoteToken.WAVAX) {
         value = value.plus(bnbPrice.times(farm.lpTotalInQuoteToken));
       } 
       else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {

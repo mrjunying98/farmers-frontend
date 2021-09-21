@@ -26,8 +26,8 @@ export enum QuoteToken {
   'USDC' = 'USDC',
   'TWT' = 'TWT',
   'UST' = 'UST',
-  'WMATIC' = 'WMATIC',
-  'MATIC' = 'MATIC',
+  'WAVAX' = 'WAVAX',
+  'AVAX' = 'AVAX',
   'WETH' = 'WETH'
 }
 
