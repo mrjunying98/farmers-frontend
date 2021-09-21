@@ -10,6 +10,13 @@ const StyledTotalValueLockedCard = styled(Card)`
   align-items: center;
   display: flex;
   flex: 1;
+
+  opacity: 1;
+  background-image: url('/images/egg/tvl.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  
 `
 
 const TotalValueLockedCard = () => {

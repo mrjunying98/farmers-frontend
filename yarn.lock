@@ -1934,7 +1934,7 @@
 
 "@pancakeswap-libs/uikit@farmersonlydefi/farmers-uikit":
   version "0.10.2"
-  resolved "https://codeload.github.com/farmersonlydefi/farmers-uikit/tar.gz/4320e0f129fdd8ef3c736aeab4bdfff7dd91f921"
+  resolved "https://codeload.github.com/farmersonlydefi/farmers-uikit/tar.gz/0ad2db4a2651615d61c4554f90f0ac63200765d5"
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"

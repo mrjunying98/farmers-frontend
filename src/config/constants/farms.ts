@@ -224,6 +224,26 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.usdc,
   },
 
+  // *********************************
+
+  // DIVIDEND SUBMIT FORM
+  {
+    pid: -1,
+    risk: 0,
+    isTokenOnly: true,
+    lpSymbol: 'Your Project? 👀',
+    decimal: 0,
+    lpAddresses: {
+      43114: '0x000000000000000000000000000000000000dEaD'
+    },
+    tokenSymbol: 'XXX',
+    tokenAddresses: {
+      43114: '0x000000000000000000000000000000000000dEaD'
+    },
+    quoteTokenSymbol: QuoteToken.USDC,
+    quoteTokenAdresses: contracts.usdc,
+  },
+
 ]
 
 export default farms

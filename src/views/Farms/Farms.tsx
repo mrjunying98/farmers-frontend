@@ -43,11 +43,13 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
 
   const [stakedOnly, setStakedOnly] = useState(false)
 
-  const activeFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier !== '0X')
-  const inactiveFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier === '0X')
+  const activeFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier !== '0X' && farm.pid !== -1)
+  const inactiveFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier === '0X' && farm.pid !== -1)
 
+  const dividendSubmit = farmsLP.filter((farm) => farm.pid === -1)
+  
   const stakedOnlyFarms = activeFarms.filter(
-    (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
+    (farm) => farm.userData && farm.pid !== -1 && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
 
   // /!\ This function will be removed soon
@@ -163,15 +165,9 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
       <div>
         {/* <Divider /> */}
         <FlexLayout>
-        {/* <FarmCard
-          key={0}
-          farm={farm}
-          removed={removed}    MODIFICA QUESTO XXXX
-          bnbPrice={bnbPrice}
-          cakePrice={cakePrice}
-          ethereum={ethereum}
-          account={account}
-        /> */}
+        <Route exact path={`${path}`}>
+            {farmsList(dividendSubmit, true)}
+          </Route>
           {/* <Route exact path={`${path}`}>
             {stakedOnly ? farmsList(stakedOnlyFarms, false) : farmsList(activeFarms, false)}
           </Route>

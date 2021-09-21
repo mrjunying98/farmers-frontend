@@ -45,7 +45,7 @@ const Hero = styled.div`
     padding-top: 0;
     position: relative;
     z-index: 2;
-    height: 300px;
+    height: 120px;
 
     &:before {
       content: ' ';

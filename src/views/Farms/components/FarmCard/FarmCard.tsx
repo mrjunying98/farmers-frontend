@@ -133,6 +133,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses, risk } = farm
 
+  if (risk !== 0) {
+
   return (
     <FCard>
       {farm.tokenSymbol === 'CORN' && <StyledCardAccent />}
@@ -202,5 +204,62 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     </FCard>
   )
 }
+
+  return (
+    <FCard>
+      {farm.tokenSymbol === 'CORN' && <StyledCardAccent />}
+      <CardHeading
+        lpLabel={lpLabel}
+        multiplier={farm.multiplier}
+        risk={risk}
+        depositFee={farm.depositFeeBP}
+        farmImage={farmImage}
+        tokenSymbol={farm.tokenSymbol}
+        otherExchange={farm.otherExchange}
+      />
+      {removed && (
+        <Flex justifyContent='space-between' alignItems='center'>
+          <Text color="#FFFFFF">{TranslateString(352, 'APR')}:</Text>
+          <Text color="#FFFFFF" bold style={{ display: 'flex', alignItems: 'center' }}>
+                ???%
+          </Text>
+        </Flex>
+      )}
+      <Flex justifyContent='space-between'>
+        <Text color="#FFFFFF">{TranslateString(318, 'Earn')}:</Text>
+        <Text mb="20px" color="#FFFFFF" bold>???</Text>
+      </Flex>
+      <Flex justifyContent='space-between'>
+        <Text color="#FFFFFF">{TranslateString(999, 'Create a pool for your token!')}</Text>
+        {/* <Text color="#FFFFFF" bold style={{ fontSize: '24px' }}>{(farm.depositFeeBP / 100)}%</Text> */}
+      </Flex>
+      <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />
+      {/* <Divider />
+      <ExpandableSectionButton
+        onClick={() => setShowExpandableSection(!showExpandableSection)}
+        expanded={showExpandableSection}
+      />
+      <ExpandingWrapper expanded={showExpandableSection}>
+        <DetailsSection
+          removed={removed}
+          isTokenOnly={farm.isTokenOnly}
+          bscScanAddress={
+            farm.isTokenOnly ?
+              `https://cchain.explorer.avax.network/address/${farm.tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
+              :
+              `https://cchain.explorer.avax.network/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
+          }
+          totalValueFormated={totalValue}
+          lpLabel={lpLabel}
+          quoteTokenAdresses={quoteTokenAdresses}
+          quoteTokenSymbol={quoteTokenSymbol}
+          tokenAddresses={tokenAddresses}
+          otherExchange={farm.otherExchange}
+        />
+      </ExpandingWrapper> */}
+    </FCard>
+  )
+}
+
 
 export default FarmCard

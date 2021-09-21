@@ -1,6 +1,7 @@
 import React, { useMemo, useState, useCallback } from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { provider } from 'web3-core'
 import { getContract } from 'utils/erc20'
 import { Button, Flex, Text } from '@pancakeswap-libs/uikit'
@@ -64,6 +65,8 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
     )
   }
 
+  if (pid !== -1) {
+
   return (
     <Action>
       <Flex>
@@ -87,6 +90,35 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
       {!account ? <UnlockButton mt="8px" fullWidth /> : renderApprovalOrStakeButton()}
     </Action>
   )
+}
+
+return (
+    <Action>
+      <Flex>
+        {/* <Text bold textTransform="uppercase" color="#FFFFFF" fontSize="12px" pr="3px">
+          TODO: Is there a way to get a dynamic value here from useFarmFromSymbol?
+          ???
+        </Text>
+        <Text bold textTransform="uppercase" color="#cacaca" fontSize="12px">
+          {TranslateString(999, 'Earned')}
+        </Text>
+      </Flex>
+      <HarvestAction earnings={earnings} pid={pid} decimal={decimal}/>
+      <Flex>
+        <Text bold textTransform="uppercase" color="#FFFFFF" fontSize="12px" pr="3px">
+          CORN
+        </Text>
+        <Text bold textTransform="uppercase" color="#cacaca" fontSize="12px">
+          {TranslateString(999, 'Staked')}
+        </Text> */}
+      </Flex>
+       <a href="https://t.me/FarmersOnlyDev" target="_blank" rel="noreferrer">
+        <Button mt="8px" fullWidth >Apply now</Button>
+      </a>
+    </Action>
+  )
+
+
 }
 
 export default CardActions
