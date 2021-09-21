@@ -16,22 +16,28 @@ const Blurb = styled(Text)`
   font-weight: 600;
 `
 
-const StyledHero = styled.div`
-  background-image: url('');
+let StyledHero
+
+
+const Hero = ({tokenMode,dividendsMode}) => {
+  const TranslateString = useI18n()
+  if (!dividendsMode) {
+
+    StyledHero = styled.div`
+  background-image: url('/images/egg/banner-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 0px;
+  padding-bottom: 17px;
   padding-top: 32px;
-  margin-bottom: 0px;
+  margin-bottom: -12px;
 `
-const Hero = ({tokenMode}) => {
-  const TranslateString = useI18n()
 
   return (
     <StyledHero>
       <Container>
-        <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >
-          {TranslateString(999, 'Yield Farming starts at block #IDK')}
+        <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >{
+            TranslateString(999, 'Yield Farming starts at block #IDK')
+        }
         </Heading>
         <Text color="#FFFFFF" >{TranslateString(999, 'But you can already stake your tokens!')}
         </Text>
@@ -43,15 +49,45 @@ const Hero = ({tokenMode}) => {
           {TranslateString(999, 'At block #19070000')}
         </Heading> */}
         <Title color="#FFFFFF" style={{ textAlign: 'center' }}>{
-          tokenMode ?
+          !tokenMode ?
             TranslateString(10002, 'Stake tokens to earn CORN')
             :
-          TranslateString(320, 'Stake LP tokens to earn CORN')
+            TranslateString(999, 'Stake LP tokens to earn CORN')
+          
         }</Title>
-        <Blurb color="#FFFFFF" style={{ textAlign: 'center' }}>{TranslateString(10000, 'Deposit fees will be used accordingly with the community')}</Blurb>
+        <Blurb color="#FFFFFF" style={{ textAlign: 'center' }}>{TranslateString(10000, 'Deposit fees will be used to buyback CORN')}</Blurb>
       </Container>
     </StyledHero>
   )
 }
+
+StyledHero = styled.div`
+  background-image: url('/images/egg/banner-bg1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 17px;
+  padding-top: 44px;
+  margin-bottom: -12px;
+`
+
+  return (
+    <StyledHero>
+      <Container>
+        {/* <Heading as="h1" size="lg" mb="12px" color="#fb3321" >
+          {TranslateString(999, 'Yield Farming started!')}
+        </Heading>
+        <Heading as="h1" size="sm" mb="27px" color="#fb3321" >
+          {TranslateString(999, 'At block #19070000')}
+        </Heading> */}
+        <Title color="#FFFFFF" style={{ textAlign: 'center' }}>{
+            TranslateString(999, 'CORN Dividends')
+          
+        }</Title>
+        <Blurb color="#FFFFFF" style={{ textAlign: 'center' }}>{TranslateString(999, 'Stake CORN to earn new tokens')}</Blurb>
+      </Container>
+    </StyledHero>
+  )
+}
+
 
 export default Hero

@@ -35,16 +35,16 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: '/pools',
   },
-  /* {
-     label: 'Lottery', // XXXXSOON
-     icon: 'TicketIcon',
-     href: '/lottery',
+  {
+     label: 'Dividends', // XXXXSOON
+     icon: 'BondsIcon',
+     href: '/dividends',
   },
   {
      label: 'NFT (Coming Soon)', // XXXXSOON
      icon: 'NftIcon',
      href: '/nft',
-  }, */
+  },
   {
     label: 'Info',
     icon: 'InfoIcon',

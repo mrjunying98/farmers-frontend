@@ -20,6 +20,7 @@ import Divider from './components/Divider'
 
 export interface FarmsProps{
   tokenMode?: boolean
+  dividendsMode?: boolean
 }
 
 const Farms: React.FC<FarmsProps> = (farmsProps) => {
@@ -30,6 +31,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const bnbPrice = usePriceBnbBusd()
   const { account, ethereum }: { account: string; ethereum: provider } = useWallet()
   const {tokenMode} = farmsProps;
+  const {dividendsMode} = farmsProps;
 
   const dispatch = useDispatch()
   const { fastRefresh } = useRefresh()
@@ -106,9 +108,11 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
     [account, cakePrice, ethereum, bnbPrice],
   )
 
+  if (!dividendsMode) {
+
   return (
     <>
-    <Hero tokenMode={tokenMode}/>
+    <Hero tokenMode={tokenMode} dividendsMode={dividendsMode}/>
     <Page>
       {/* <Heading as="h1" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
         {
@@ -137,6 +141,50 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
       </Page>
       </>
   )
+  }
+
+
+  return (
+    <>
+    <Hero tokenMode={tokenMode} dividendsMode={dividendsMode}/>
+    <Page>
+      {/* <Heading as="h1" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
+        {
+          tokenMode ?
+            TranslateString(10002, 'Stake tokens to earn CORN')
+            :
+          TranslateString(320, 'Stake LP tokens to earn CORN')
+        }
+      </Heading>
+      <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
+        {TranslateString(10000, 'Deposit Fee will be used to buyback CORN')}
+      </Heading> */}
+      {/* <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly}/> */}
+      <div>
+        {/* <Divider /> */}
+        <FlexLayout>
+        {/* <FarmCard
+          key={0}
+          farm={farm}
+          removed={removed}    MODIFICA QUESTO XXXX
+          bnbPrice={bnbPrice}
+          cakePrice={cakePrice}
+          ethereum={ethereum}
+          account={account}
+        /> */}
+          {/* <Route exact path={`${path}`}>
+            {stakedOnly ? farmsList(stakedOnlyFarms, false) : farmsList(activeFarms, false)}
+          </Route>
+          <Route exact path={`${path}/history`}>
+            {farmsList(inactiveFarms, true)}
+          </Route> */}
+        </FlexLayout>
+      </div>
+      {/* <Image src="/images/egg/LogoTextNewDark.png" alt="illustration" width={1218} height={198} responsive /> */}
+      </Page>
+      </>
+  )
+
 }
 
 export default Farms

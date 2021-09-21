@@ -9,7 +9,7 @@ declare module 'styled-components' {
 
 const GlobalStyle = createGlobalStyle`
   * {
-  font-family: "Nasty", cursive;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 200;
   font-display: swap;
