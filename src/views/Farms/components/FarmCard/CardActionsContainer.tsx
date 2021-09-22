@@ -74,7 +74,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
           {/* TODO: Is there a way to get a dynamic value here from useFarmFromSymbol? */}
           CORN
         </Text>
-        <Text bold textTransform="uppercase" color="#cacaca" fontSize="12px">
+        <Text bold textTransform="uppercase" color="#E9EAEB" fontSize="12px">
           {TranslateString(999, 'Earned')}
         </Text>
       </Flex>
@@ -83,7 +83,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
         <Text bold textTransform="uppercase" color="#FFFFFF" fontSize="12px" pr="3px">
           {lpName}
         </Text>
-        <Text bold textTransform="uppercase" color="#cacaca" fontSize="12px">
+        <Text bold textTransform="uppercase" color="#E9EAEB" fontSize="12px">
           {TranslateString(999, 'Staked')}
         </Text>
       </Flex>
@@ -99,7 +99,7 @@ return (
           TODO: Is there a way to get a dynamic value here from useFarmFromSymbol?
           ???
         </Text>
-        <Text bold textTransform="uppercase" color="#cacaca" fontSize="12px">
+        <Text bold textTransform="uppercase" color="#E9EAEB" fontSize="12px">
           {TranslateString(999, 'Earned')}
         </Text>
       </Flex>
@@ -108,7 +108,7 @@ return (
         <Text bold textTransform="uppercase" color="#FFFFFF" fontSize="12px" pr="3px">
           CORN
         </Text>
-        <Text bold textTransform="uppercase" color="#cacaca" fontSize="12px">
+        <Text bold textTransform="uppercase" color="#E9EAEB" fontSize="12px">
           {TranslateString(999, 'Staked')}
         </Text> */}
       </Flex>

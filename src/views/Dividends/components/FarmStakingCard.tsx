@@ -31,7 +31,6 @@ max-width: 300px;
     height: 100%;
     z-index: -1;
     opacity: 0.9;
-  background-image: url('/images/egg/2a.png');
   background-repeat: no-repeat;
   background-position: top right;
   min-height: 376px;
@@ -47,7 +46,7 @@ const CardImage = styled.img`
 `
 
 const Label = styled.div`
-  color: ${({ theme }) => "#cacaca"};
+  color: ${({ theme }) => "#E9EAEB"};
   font-size: 14px;
 `
 

@@ -46,7 +46,7 @@ const CardImage = styled.img`
 `
 
 const Label = styled.div`
-  color: ${({ theme }) => "#cacaca"};
+  color: ${({ theme }) => "#E9EAEB"};
   font-size: 14px;
 `
 
