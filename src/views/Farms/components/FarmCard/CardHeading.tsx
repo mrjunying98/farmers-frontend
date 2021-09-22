@@ -34,6 +34,8 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   isCommunityFarm,
   otherExchange
 }) => {
+
+  if (tokenSymbol !== 'XXX') {
   return (
     <Wrapper justifyContent="space-between" alignItems="center" mb="12px">
       <Image src={`/images/farms/${farmImage}.png`} alt={tokenSymbol} width={64} height={64} />
@@ -45,6 +47,23 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
           {/* {isCommunityFarm ? <CommunityTag /> : <CoreTag />} */}
           {/* <RiskTag risk={risk} /> */}
           <MultiplierTag variant="primary">{multiplier}</MultiplierTag>
+        </Flex>
+      </Flex>
+    </Wrapper>
+  )
+}
+
+return (
+    <Wrapper justifyContent="space-between" alignItems="center" mb="12px">
+      <Image src='/images/farms/xxx.png' alt={tokenSymbol} width={64} height={64} />
+      <Flex flexDirection="column" alignItems="flex-end">
+        <Heading color="#FFFFFF" mb="4px">{lpLabel}</Heading>
+        <Flex justifyContent="flex-end" flexWrap="wrap">
+          {depositFee === 0 ? <NoFeeTag /> : null}
+          {otherExchange ? <ExchangeTag exchange={otherExchange} /> : null}
+          {/* {isCommunityFarm ? <CommunityTag /> : <CoreTag />} */}
+          {/* <RiskTag risk={risk} /> */}
+          {/* <MultiplierTag variant="primary">{multiplier}</MultiplierTag> */}
         </Flex>
       </Flex>
     </Wrapper>

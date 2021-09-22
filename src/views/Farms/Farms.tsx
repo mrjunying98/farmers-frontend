@@ -43,13 +43,13 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
 
   const [stakedOnly, setStakedOnly] = useState(false)
 
-  const activeFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier !== '0X' && farm.pid !== -1)
-  const inactiveFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier === '0X' && farm.pid !== -1)
+  const activeFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier !== '0X' && farm.pid !== 100)
+  const inactiveFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier === '0X' && farm.pid !== 100)
 
-  const dividendSubmit = farmsLP.filter((farm) => farm.pid === -1)
+  const dividendSubmit = farmsLP.filter((farm) => farm.pid === 100)
   
   const stakedOnlyFarms = activeFarms.filter(
-    (farm) => farm.userData && farm.pid !== -1 && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
+    (farm) => farm.userData && farm.pid !== 100 && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
 
   // /!\ This function will be removed soon
@@ -62,7 +62,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
         // if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
         //   return farm
         // }
-        const cakeRewardPerBlock = new BigNumber(farm.cornPerBlock || 1).times(new BigNumber(farm.poolWeight)).div(new BigNumber(10).pow(18))
+        const cakeRewardPerBlock = new BigNumber(farm.thunderPerBlock || 1).times(new BigNumber(farm.poolWeight)).div(new BigNumber(10).pow(18))
         const cakeRewardPerYear = cakeRewardPerBlock.times(BLOCKS_PER_YEAR)
 
         let apy = cakePrice.times(cakeRewardPerYear);

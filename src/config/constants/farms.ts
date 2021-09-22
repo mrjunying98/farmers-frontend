@@ -3,7 +3,7 @@ import { FarmConfig, QuoteToken } from './types'
 
 const farms: FarmConfig[] = [
 
-   {
+  {
     pid: 11,
     risk: 5,
     lpSymbol: 'CORN-USDC.e LP',
@@ -219,26 +219,6 @@ const farms: FarmConfig[] = [
     tokenSymbol: 'DAI.e',
     tokenAddresses: {
       43114: '0xd586E7F844cEa2F87f50152665BCbc2C279D8d70'
-    },
-    quoteTokenSymbol: QuoteToken.USDC,
-    quoteTokenAdresses: contracts.usdc,
-  },
-
-  // *********************************
-
-  // DIVIDEND SUBMIT FORM
-  {
-    pid: -1,
-    risk: 0,
-    isTokenOnly: true,
-    lpSymbol: 'Your Project? 👀',
-    decimal: 0,
-    lpAddresses: {
-      43114: '0x000000000000000000000000000000000000dEaD'
-    },
-    tokenSymbol: 'XXX',
-    tokenAddresses: {
-      43114: '0x000000000000000000000000000000000000dEaD'
     },
     quoteTokenSymbol: QuoteToken.USDC,
     quoteTokenAdresses: contracts.usdc,

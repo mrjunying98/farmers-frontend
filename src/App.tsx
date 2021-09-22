@@ -14,6 +14,7 @@ import Vaults from './views/Vaults'
 // Only pool is included in the main bundle because of it's the most visited page'
 const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
+const Dividends = lazy(() => import('./views/Dividends'))
 // const Lottery = lazy(() => import('./views/Lottery'))
 // const Pools = lazy(() => import('./views/Pools'))
 // const Ifos = lazy(() => import('./views/Ifos'))
@@ -52,8 +53,8 @@ const App: React.FC = () => {
             <Route path="/pools">
               <Farms tokenMode/>
             </Route>
-			<Route path="/dividends">
-              <Farms dividendsMode/>
+			       <Route path="/dividends">
+              <Dividends />
             </Route>
             <Route path="/vaults">
              <Vaults />

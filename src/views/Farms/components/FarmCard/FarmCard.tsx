@@ -207,7 +207,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
   return (
     <FCard>
-      {farm.tokenSymbol === 'CORN' && <StyledCardAccent />}
+      {farm.tokenSymbol === '???' && <StyledCardAccent />}
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
@@ -227,8 +227,13 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       )}
       <Flex justifyContent='space-between'>
         <Text color="#FFFFFF">{TranslateString(318, 'Earn')}:</Text>
-        <Text mb="20px" color="#FFFFFF" bold>???</Text>
+        <Text color="#FFFFFF" bold>???</Text>
       </Flex>
+      <Flex justifyContent='space-between'>
+        <Text color="#FFFFFF">{TranslateString(999, 'Your Stake')}:</Text>
+        <Text mb="10px" color="#FFFFFF" bold>??? CORN</Text>
+      </Flex>
+      <Divider />
       <Flex justifyContent='space-between'>
         <Text color="#FFFFFF">{TranslateString(999, 'Create a pool for your token!')}</Text>
         {/* <Text color="#FFFFFF" bold style={{ fontSize: '24px' }}>{(farm.depositFeeBP / 100)}%</Text> */}

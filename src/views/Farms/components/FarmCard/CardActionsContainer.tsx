@@ -65,7 +65,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
     )
   }
 
-  if (pid !== -1) {
+  if (pid !== 100) {
 
   return (
     <Action>

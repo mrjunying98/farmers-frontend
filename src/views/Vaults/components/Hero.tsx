@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <StyledHero>
       <Container>
-        <Title>{TranslateString(500, 'Corn Vaults')}</Title>
+        <Title>{TranslateString(500, 'Thunder Vaults')}</Title>
         <Blurb>{TranslateString(502, 'Yield Auto-compounding, as powerful as two farmers in love!')}</Blurb>
       </Container>
     </StyledHero>

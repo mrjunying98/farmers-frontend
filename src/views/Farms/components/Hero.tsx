@@ -24,12 +24,14 @@ const Hero = ({tokenMode,dividendsMode}) => {
   if (!dividendsMode) {
 
     StyledHero = styled.div`
+
   background-image: url('/images/egg/banner-bg.png');
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 17px;
+  background-size: 750px;
+  padding-bottom: 277px;
   padding-top: 32px;
-  margin-bottom: -12px;
+  margin-bottom: -262px;
 `
 
   return (
@@ -63,11 +65,12 @@ const Hero = ({tokenMode,dividendsMode}) => {
 
 StyledHero = styled.div`
   background-image: url('/images/egg/banner-bg1.png');
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 17px;
+  background-size: 630px;
+  padding-bottom: 47px;
   padding-top: 44px;
-  margin-bottom: -12px;
+  margin-bottom: -32px;
 `
 
   return (

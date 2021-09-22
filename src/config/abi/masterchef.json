@@ -2,8 +2,8 @@
 		{
 			"inputs": [
 				{
-					"internalType": "contract CornToken",
-					"name": "_corn",
+					"internalType": "contract ThunderToken",
+					"name": "_thunder",
 					"type": "address"
 				},
 				{
@@ -144,7 +144,7 @@
 				{
 					"indexed": false,
 					"internalType": "uint256",
-					"name": "cornPerBlock",
+					"name": "thunderPerBlock",
 					"type": "uint256"
 				}
 			],
@@ -201,10 +201,10 @@
 		},
 		{
 			"inputs": [],
-			"name": "corn",
+			"name": "thunder",
 			"outputs": [
 				{
-					"internalType": "contract CornToken",
+					"internalType": "contract ThunderToken",
 					"name": "",
 					"type": "address"
 				}
@@ -214,7 +214,7 @@
 		},
 		{
 			"inputs": [],
-			"name": "cornPerBlock",
+			"name": "thunderPerBlock",
 			"outputs": [
 				{
 					"internalType": "uint256",
@@ -339,7 +339,7 @@
 					"type": "address"
 				}
 			],
-			"name": "pendingCorn",
+			"name": "pendingThunder",
 			"outputs": [
 				{
 					"internalType": "uint256",
@@ -396,7 +396,7 @@
 				},
 				{
 					"internalType": "uint256",
-					"name": "accCornPerShare",
+					"name": "accThunderPerShare",
 					"type": "uint256"
 				},
 				{
@@ -520,7 +520,7 @@
 			"inputs": [
 				{
 					"internalType": "uint256",
-					"name": "_cornPerBlock",
+					"name": "_thunderPerBlock",
 					"type": "uint256"
 				}
 			],

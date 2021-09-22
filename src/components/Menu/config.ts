@@ -83,7 +83,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'VFAT Tools',
-        href: 'https://vfat.tools/polygon/cornyswap/',
+        href: 'https://vfat.tools/polygon/thunderyswap/',
       },
       {
         label: 'PolyPup UI',
@@ -97,19 +97,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'RugDoctor',
-        href: 'https://rugdoc.io/project/cornyswap/',
+        href: 'https://rugdoc.io/project/thunderyswap/',
       },
       {
         label: 'DappRadar',
-        href: 'https://dappradar.com/polygon/defi/cornyswap-finance',
+        href: 'https://dappradar.com/polygon/defi/thunderyswap-finance',
       },
       {
         label: 'Ape O\'Clock',
-        href: 'https://www.apeoclock.com/launch/cornyswap-farm-launch/',
+        href: 'https://www.apeoclock.com/launch/thunderyswap-farm-launch/',
       },
       {
         label: 'JaGo',
-        href: 'https://jagosafer.io/cornyswap',
+        href: 'https://jagosafer.io/thunderyswap',
       },
     ],
   }, */
@@ -119,7 +119,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Techrate',
-        href: 'https://github.com/cornyswap/corny-audits/blob/main/Techrate%20Check.pdf',
+        href: 'https://github.com/thunderyswap/thundery-audits/blob/main/Techrate%20Check.pdf',
       },
     ],
   }, */
