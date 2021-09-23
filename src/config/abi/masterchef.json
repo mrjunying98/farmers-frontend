@@ -2,24 +2,24 @@
 		{
 			"inputs": [
 				{
-					"internalType": "contract ThunderToken",
-					"name": "_thunder",
+					"internalType": "contract TestCoin",
+					"name": "_test",
 					"type": "address"
 				},
 				{
-					"internalType": "uint256",
-					"name": "_startBlock",
-					"type": "uint256"
-				},
-				{
 					"internalType": "address",
-					"name": "_devAddress",
+					"name": "_devaddr",
 					"type": "address"
 				},
 				{
 					"internalType": "address",
 					"name": "_feeAddress",
 					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_startTime",
+					"type": "uint256"
 				}
 			],
 			"stateMutability": "nonpayable",
@@ -105,6 +105,31 @@
 				},
 				{
 					"indexed": true,
+					"internalType": "uint256",
+					"name": "pid",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "amountLockedUp",
+					"type": "uint256"
+				}
+			],
+			"name": "RewardLockedUp",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "user",
+					"type": "address"
+				},
+				{
+					"indexed": true,
 					"internalType": "address",
 					"name": "newAddress",
 					"type": "address"
@@ -136,6 +161,19 @@
 			"anonymous": false,
 			"inputs": [
 				{
+					"indexed": false,
+					"internalType": "bytes",
+					"name": "reason",
+					"type": "bytes"
+				}
+			],
+			"name": "TestMintError",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
 					"indexed": true,
 					"internalType": "address",
 					"name": "user",
@@ -144,11 +182,24 @@
 				{
 					"indexed": false,
 					"internalType": "uint256",
-					"name": "thunderPerBlock",
+					"name": "testPerSecond",
 					"type": "uint256"
 				}
 			],
 			"name": "UpdateEmissionRate",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "newStartTime",
+					"type": "uint256"
+				}
+			],
+			"name": "UpdateStartTime",
 			"type": "event"
 		},
 		{
@@ -177,6 +228,106 @@
 			"type": "event"
 		},
 		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "pid",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "lpToken",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "allocPoint",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "depositFeeBP",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "harvestInterval",
+					"type": "uint256"
+				}
+			],
+			"name": "addPool",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "pid",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "lpToken",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "allocPoint",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "depositFeeBP",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "harvestInterval",
+					"type": "uint256"
+				}
+			],
+			"name": "setPool",
+			"type": "event"
+		},
+		{
+			"inputs": [],
+			"name": "EMISSION_RATE",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "MAXIMUM_HARVEST_INTERVAL",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
 			"inputs": [
 				{
 					"internalType": "uint256",
@@ -184,7 +335,7 @@
 					"type": "uint256"
 				},
 				{
-					"internalType": "contract IERC20",
+					"internalType": "contract IBEP20",
 					"name": "_lpToken",
 					"type": "address"
 				},
@@ -192,6 +343,16 @@
 					"internalType": "uint16",
 					"name": "_depositFeeBP",
 					"type": "uint16"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_harvestInterval",
+					"type": "uint256"
+				},
+				{
+					"internalType": "bool",
+					"name": "_withUpdate",
+					"type": "bool"
 				}
 			],
 			"name": "add",
@@ -201,24 +362,11 @@
 		},
 		{
 			"inputs": [],
-			"name": "thunder",
-			"outputs": [
-				{
-					"internalType": "contract ThunderToken",
-					"name": "",
-					"type": "address"
-				}
-			],
-			"stateMutability": "view",
-			"type": "function"
-		},
-		{
-			"inputs": [],
-			"name": "thunderPerBlock",
+			"name": "blockTimestamp",
 			"outputs": [
 				{
 					"internalType": "uint256",
-					"name": "",
+					"name": "time",
 					"type": "uint256"
 				}
 			],
@@ -245,7 +393,7 @@
 		},
 		{
 			"inputs": [],
-			"name": "devAddress",
+			"name": "devaddr",
 			"outputs": [
 				{
 					"internalType": "address",
@@ -267,6 +415,19 @@
 			"name": "emergencyWithdraw",
 			"outputs": [],
 			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "endTime",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
 			"type": "function"
 		},
 		{
@@ -339,7 +500,7 @@
 					"type": "address"
 				}
 			],
-			"name": "pendingThunder",
+			"name": "pendingTest",
 			"outputs": [
 				{
 					"internalType": "uint256",
@@ -353,7 +514,7 @@
 		{
 			"inputs": [
 				{
-					"internalType": "contract IERC20",
+					"internalType": "contract IBEP20",
 					"name": "",
 					"type": "address"
 				}
@@ -380,7 +541,7 @@
 			"name": "poolInfo",
 			"outputs": [
 				{
-					"internalType": "contract IERC20",
+					"internalType": "contract IBEP20",
 					"name": "lpToken",
 					"type": "address"
 				},
@@ -391,18 +552,28 @@
 				},
 				{
 					"internalType": "uint256",
-					"name": "lastRewardBlock",
+					"name": "lastRewardSecond",
 					"type": "uint256"
 				},
 				{
 					"internalType": "uint256",
-					"name": "accThunderPerShare",
+					"name": "accTestPerShare",
 					"type": "uint256"
 				},
 				{
 					"internalType": "uint16",
 					"name": "depositFeeBP",
 					"type": "uint16"
+				},
+				{
+					"internalType": "uint256",
+					"name": "harvestInterval",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "lpSupply",
+					"type": "uint256"
 				}
 			],
 			"stateMutability": "view",
@@ -444,6 +615,16 @@
 					"internalType": "uint16",
 					"name": "_depositFeeBP",
 					"type": "uint16"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_harvestInterval",
+					"type": "uint256"
+				},
+				{
+					"internalType": "bool",
+					"name": "_withUpdate",
+					"type": "bool"
 				}
 			],
 			"name": "set",
@@ -455,7 +636,7 @@
 			"inputs": [
 				{
 					"internalType": "address",
-					"name": "_devAddress",
+					"name": "_devaddr",
 					"type": "address"
 				}
 			],
@@ -479,7 +660,33 @@
 		},
 		{
 			"inputs": [],
-			"name": "startBlock",
+			"name": "startTime",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "test",
+			"outputs": [
+				{
+					"internalType": "contract TestCoin",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "testPerSecond",
 			"outputs": [
 				{
 					"internalType": "uint256",
@@ -520,7 +727,7 @@
 			"inputs": [
 				{
 					"internalType": "uint256",
-					"name": "_thunderPerBlock",
+					"name": "_testPerSecond",
 					"type": "uint256"
 				}
 			],
@@ -546,11 +753,11 @@
 			"inputs": [
 				{
 					"internalType": "uint256",
-					"name": "_startBlock",
+					"name": "_newStartTime",
 					"type": "uint256"
 				}
 			],
-			"name": "updateStartBlock",
+			"name": "updateStartTime",
 			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"
@@ -579,6 +786,40 @@
 					"internalType": "uint256",
 					"name": "rewardDebt",
 					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "rewardLockedUp",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "nextHarvestUntil",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_pid",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "_user",
+					"type": "address"
+				}
+			],
+			"name": "userPoolLockup",
+			"outputs": [
+				{
+					"internalType": "int256",
+					"name": "lock",
+					"type": "int256"
 				}
 			],
 			"stateMutability": "view",

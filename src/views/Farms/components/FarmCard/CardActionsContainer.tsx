@@ -30,7 +30,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
   const { pid, lpAddresses, tokenAddresses, isTokenOnly, depositFeeBP, decimal } = useFarmFromPid(farm.pid)
-  const { allowance, tokenBalance, stakedBalance, earnings } = useFarmUser(pid)
+  const { allowance, tokenBalance, stakedBalance, earnings, lockup } = useFarmUser(pid)
   const lpAddress = lpAddresses[process.env.REACT_APP_CHAIN_ID]
   const tokenAddress = tokenAddresses[process.env.REACT_APP_CHAIN_ID];
   const lpName = farm.lpSymbol.toUpperCase()
@@ -64,6 +64,8 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
       </Button>
     )
   }
+  
+  const canHarvest = lockup.isEqualTo(0) // XXXXXXXXXXXXXXXXXXXXX
 
   if (pid !== 100) {
 

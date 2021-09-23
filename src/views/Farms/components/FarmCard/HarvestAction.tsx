@@ -5,6 +5,7 @@ import useI18n from 'hooks/useI18n'
 import { useHarvest } from 'hooks/useHarvest'
 import { getBalanceNumber } from 'utils/formatBalance'
 import styled from 'styled-components'
+import { useFarmUser } from 'state/hooks'
 import useStake from '../../../../hooks/useStake'
 
 interface FarmCardActionsProps {
@@ -25,17 +26,24 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, decimal}
   const [pendingTx, setPendingTx] = useState(false)
   const { onReward } = useHarvest(pid)
   const { onStake } = useStake(pid, decimal)
+  const { lockup, stakedBalance } = useFarmUser(pid)
 
   const rawEarningsBalance = getBalanceNumber(earnings, decimal)
   const displayBalance = rawEarningsBalance.toLocaleString()
+  
+  
+  const canHarvest = lockup.isEqualTo(0)
+  const harvestBlank = stakedBalance.isEqualTo(0)
+  
+  const harvestTime = new Date(lockup.toNumber() * 1000).toISOString().substr(11, 8);
 
   return (
     <Flex mb='8px' justifyContent='space-between' alignItems='center'>
       <Heading color={rawEarningsBalance === 0 ? 'textDisabled' : 'text'}>{displayBalance}</Heading>
       <BalanceAndCompound>
-        {pid === 20 ?  // COMPOUND PID PIDCOMPOUND COMPOUNDPID
+        {pid === 10 ?  // COMPOUND PID PIDCOMPOUND COMPOUNDPID
           <Button
-            disabled={rawEarningsBalance === 0 || pendingTx}
+            disabled={rawEarningsBalance === 0 || pendingTx || !canHarvest}
             size='sm'
             variant='secondary'
             marginBottom='15px'
@@ -49,14 +57,18 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, decimal}
           </Button>
           : null}
         <Button
-          disabled={rawEarningsBalance === 0 || pendingTx}
+          disabled={rawEarningsBalance === 0 || pendingTx || !canHarvest}
           onClick={async () => {
             setPendingTx(true)
             await onReward()
             setPendingTx(false)
           }}
         >
-          {TranslateString(999, 'Harvest')}
+          {canHarvest ?
+		  TranslateString(999, 'Harvest')
+		  :
+		  harvestTime
+		  }
         </Button>
       </BalanceAndCompound>
     </Flex>

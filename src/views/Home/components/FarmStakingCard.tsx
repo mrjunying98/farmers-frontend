@@ -7,6 +7,7 @@ import useI18n from 'hooks/useI18n'
 import { useAllHarvest } from 'hooks/useHarvest'
 import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
+import { useFarmFromPid, useFarmFromSymbol, useFarmUser } from 'state/hooks'
 import CakeHarvestBalance from './CakeHarvestBalance'
 import CakeWalletBalance from './CakeWalletBalance'
 import { usePriceCakeBusd } from '../../../state/hooks'
@@ -14,6 +15,7 @@ import useTokenBalance from '../../../hooks/useTokenBalance'
 import { getCakeAddress } from '../../../utils/addressHelpers'
 import useAllEarnings from '../../../hooks/useAllEarnings'
 import { getBalanceNumber } from '../../../utils/formatBalance'
+
 
 const StyledFarmStakingCard = styled(Card)`
 position: relative;
@@ -71,6 +73,8 @@ const FarmedStakingCard = () => {
     return accum + new BigNumber(earning).div(new BigNumber(10).pow(18)).toNumber()
   }, 0)
   const balancesWithValue = farmsWithBalance.filter((balanceType) => balanceType.balance.toNumber() > 0)
+  
+   
 
   const { onReward } = useAllHarvest(balancesWithValue.map((farmWithBalance) => farmWithBalance.pid))
 

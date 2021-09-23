@@ -9,7 +9,7 @@ import { getCakeAddress } from 'utils/addressHelpers'
 import CardValue from './CardValue'
 import { useFarms, usePriceCakeBusd } from '../../../state/hooks'
 
-const StyledCakeStats = styled(Card)`
+const StyledCakeContracts = styled(Card)`
   margin-left: auto;
   margin-right: auto;
 `
@@ -17,12 +17,12 @@ const StyledCakeStats = styled(Card)`
 const Row = styled.div`
   align-items: center;
   display: flex;
-  font-size: 14px;
+  font-size: 13px;
   justify-content: space-between;
   margin-bottom: 8px;
 `
 
-const CakeStats = () => {
+const CakeContracts = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
@@ -38,38 +38,26 @@ const CakeStats = () => {
   }
 
   return (
-    <StyledCakeStats>
+    <StyledCakeContracts>
       <CardBody>
         <Heading size="xl" mb="24px" color="#FFFFFF">
-          {TranslateString(534, 'Egg Stats')}
+          {TranslateString(999, 'Contracts')}
         </Heading>
         <Row>
-          <Text fontSize="14px" color="#FFFFFF">{TranslateString(10005, 'Market Cap')}</Text>
-          <CardValue fontSize="14px" value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
+          <Text fontSize="14px" color="#FFFFFF">{TranslateString(999, 'CORN Token')}</Text>
+          <a target="_blank" rel="noreferrer noopener" href="https://cchain.explorer.avax.network/address/0x70B907f3F7231bE122100dac51C1995e6804E346/contracts" color="#fb2141">0x62BA727e2449EE3BE0573b4b102D7090c5977BFB</a> {/* XXXXCORN */}
         </Row>
         <Row>
-          <Text fontSize="14px" color="#FFFFFF">{TranslateString(536, 'Total Minted')}</Text>
-			{totalSupply && <CardValue fontSize="14px" value={getBalanceNumber(totalSupply)} decimals={0} />}
+          <Text fontSize="14px" color="#FFFFFF">{TranslateString(999, 'MasterChef')}</Text>
+        <a target="_blank" rel="noreferrer noopener" href="https://cchain.explorer.avax.network/address/0x70B907f3F7231bE122100dac51C1995e6804E346/contracts" color="#fb2141">0x62BA727e2449EE3BE0573b4b102D7090c5977BFB</a> {/* XXXXMASTERCHEF */}
         </Row>
         <Row>
-          <Text fontSize="14px" color="#FFFFFF">{TranslateString(538, 'Total Burned')}</Text>
-          <CardValue fontSize="14px" value={getBalanceNumber(burnedBalance)} decimals={0} />
-        </Row>
-        <Row>
-          <Text fontSize="14px" color="#FFFFFF">{TranslateString(10004, 'Circulating Supply')}</Text>
-			  {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} decimals={0} />}
-        </Row>
-		<Row>
-          <Text fontSize="14px" color="#FFFFFF">{TranslateString(999, 'MAX Supply')}</Text>
-          <CardValue fontSize="14px" value={7000} decimals={0} />
-        </Row>
-        <Row>
-          <Text fontSize="14px" color="#FFFFFF">{TranslateString(540, 'New EGG/block')}</Text>
-          <Text bold fontSize="14px" color="#FFFFFF">{testPerSecond}</Text>
+          <Text fontSize="14px" color="#FFFFFF">{TranslateString(999, 'Timelock')}</Text>
+        <a target="_blank" rel="noreferrer noopener" href="https://cchain.explorer.avax.network/address/0x70B907f3F7231bE122100dac51C1995e6804E346/contracts" color="#fb2141">0x62BA727e2449EE3BE0573b4b102D7090c5977BFB</a> {/* XXXXTIMELOCK */}
         </Row>
       </CardBody>
-    </StyledCakeStats>
+    </StyledCakeContracts>
   )
 }
 
-export default CakeStats
+export default CakeContracts

@@ -43,13 +43,11 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
 
   const [stakedOnly, setStakedOnly] = useState(false)
 
-  const activeFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier !== '0X' && farm.pid !== 100)
-  const inactiveFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier === '0X' && farm.pid !== 100)
-
-  const dividendSubmit = farmsLP.filter((farm) => farm.pid === 100)
+  const activeFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier !== '0X')
+  const inactiveFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier === '0X')
   
   const stakedOnlyFarms = activeFarms.filter(
-    (farm) => farm.userData && farm.pid !== 100 && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
+    (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
 
   // /!\ This function will be removed soon
@@ -62,7 +60,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
         // if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
         //   return farm
         // }
-        const cakeRewardPerBlock = new BigNumber(farm.thunderPerBlock || 1).times(new BigNumber(farm.poolWeight)).div(new BigNumber(10).pow(18))
+        const cakeRewardPerBlock = new BigNumber(farm.testPerSecond || 1).times(new BigNumber(farm.poolWeight)).div(new BigNumber(10).pow(18))
         const cakeRewardPerYear = cakeRewardPerBlock.times(BLOCKS_PER_YEAR)
 
         let apy = cakePrice.times(cakeRewardPerYear);
@@ -73,9 +71,9 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           totalValue = totalValue.times(bnbPrice);
         }
 
-        if (farm.pid === 13) {
+        /* if (farm.pid === 13) {
           totalValue = totalValue.times(16.91**3);
-        }
+        } */
 		
 		/* if (farm.pid === 12) {
           totalValue = totalValue.times(1.346);
@@ -110,7 +108,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
     [account, cakePrice, ethereum, bnbPrice],
   )
 
-  if (!dividendsMode) {
+
 
   return (
     <>
@@ -143,43 +141,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
       </Page>
       </>
   )
-  }
 
-
-  return (
-    <>
-    <Hero tokenMode={tokenMode} dividendsMode={dividendsMode}/>
-    <Page>
-      {/* <Heading as="h1" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
-        {
-          tokenMode ?
-            TranslateString(10002, 'Stake tokens to earn CORN')
-            :
-          TranslateString(320, 'Stake LP tokens to earn CORN')
-        }
-      </Heading>
-      <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-        {TranslateString(10000, 'Deposit Fee will be used to buyback CORN')}
-      </Heading> */}
-      {/* <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly}/> */}
-      <div>
-        {/* <Divider /> */}
-        <FlexLayout>
-        <Route exact path={`${path}`}>
-            {farmsList(dividendSubmit, true)}
-          </Route>
-          {/* <Route exact path={`${path}`}>
-            {stakedOnly ? farmsList(stakedOnlyFarms, false) : farmsList(activeFarms, false)}
-          </Route>
-          <Route exact path={`${path}/history`}>
-            {farmsList(inactiveFarms, true)}
-          </Route> */}
-        </FlexLayout>
-      </div>
-      {/* <Image src="/images/egg/LogoTextNewDark.png" alt="illustration" width={1218} height={198} responsive /> */}
-      </Page>
-      </>
-  )
 
 }
 

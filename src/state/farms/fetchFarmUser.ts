@@ -70,13 +70,29 @@ export const fetchFarmUserStakedBalances = async (account: string) => {
   return parsedStakedBalances
 }
 
+export const fetchFarmUserLockup = async (account: string) => {
+  const masterChefAdress = getMasterChefAddress()
+
+  const calls = farmsConfig.map((farm) => {
+    return {
+      address: masterChefAdress,
+      name: 'userPoolLockup',
+      params: [farm.pid, account],
+    }
+  })
+
+  const userPoolLockup = await multicall(masterchefABI, calls)
+
+  return userPoolLockup
+}
+
 export const fetchFarmUserEarnings = async (account: string) => {
   const masterChefAdress = getMasterChefAddress()
 
   const calls = farmsConfig.map((farm) => {
     return {
       address: masterChefAdress,
-      name: 'pendingThunder',
+      name: 'pendingTest',
       params: [farm.pid, account],
     }
   })

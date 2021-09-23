@@ -3,7 +3,7 @@ import { FarmConfig, QuoteToken } from './types'
 
 const farms: FarmConfig[] = [
 
-  {
+  /* {
     pid: 11,
     risk: 5,
     lpSymbol: 'CORN-USDC.e LP',
@@ -36,6 +36,23 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.WAVAX,
     quoteTokenAdresses: contracts.wavax,
   },
+
+    {
+    pid: 10,
+    risk: 5,
+    isTokenOnly: true,
+    lpSymbol: 'CORN',
+    decimal: 18,
+    lpAddresses: {
+      43114: '0xffd8995E1016780AF85CfE5c29Cb8bE77A64BD15' // XXXXCORN-USDC
+    },
+    tokenSymbol: 'CORN',
+    tokenAddresses: {
+      43114: '0x7a2EfB71a36B387e35e2Cc683435727E35C1e978' // XXXXCORN
+    },
+    quoteTokenSymbol: QuoteToken.USDC,
+    quoteTokenAdresses: contracts.usdc,
+  }, */
 
   {
     pid: 7,
@@ -83,23 +100,6 @@ const farms: FarmConfig[] = [
     tokenSymbol: 'USDT.e',
     tokenAddresses: {
       43114: '0xc7198437980c041c805A1EDcbA50c1Ce5db95118',
-    },
-    quoteTokenSymbol: QuoteToken.USDC,
-    quoteTokenAdresses: contracts.usdc,
-  },
-
-  {
-    pid: 10,
-    risk: 5,
-    isTokenOnly: true,
-    lpSymbol: 'CORN',
-    decimal: 18,
-    lpAddresses: {
-      43114: '0xffd8995E1016780AF85CfE5c29Cb8bE77A64BD15' // XXXXCORN-USDC
-    },
-    tokenSymbol: 'CORN',
-    tokenAddresses: {
-      43114: '0x7a2EfB71a36B387e35e2Cc683435727E35C1e978' // XXXXCORN
     },
     quoteTokenSymbol: QuoteToken.USDC,
     quoteTokenAdresses: contracts.usdc,

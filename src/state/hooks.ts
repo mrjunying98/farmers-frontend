@@ -42,6 +42,7 @@ export const useFarmUser = (pid) => {
     tokenBalance: farm.userData ? new BigNumber(farm.userData.tokenBalance) : new BigNumber(0),
     stakedBalance: farm.userData ? new BigNumber(farm.userData.stakedBalance) : new BigNumber(0),
     earnings: farm.userData ? new BigNumber(farm.userData.earnings) : new BigNumber(0),
+	lockup: farm.userData ? new BigNumber(farm.userData.lockup) : new BigNumber(0),
   }
 }
 
@@ -69,13 +70,13 @@ export const usePoolFromPid = (sousId): Pool => {
 // Prices
 
 export const usePriceBnbBusd = (): BigNumber => {
-  const pid = 5; // WAVAX-USDC LP : DEFAULT 8
+  const pid = 0; // WAVAX-USDC LP : DEFAULT 7
   const farm = useFarmFromPid(pid)
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePriceCakeBusd = (): BigNumber => {
-  const pid = 5; // CORN-USDC LP : DEFAULT 11
+  const pid = 0; // CORN-USDC LP : DEFAULT 11
   const farm = useFarmFromPid(pid);
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
 }
@@ -96,10 +97,10 @@ export const useTotalValue = (): BigNumber => {
       } */
 
 
-      if (farm.pid === 13) {
+      /* if (farm.pid === 13) {
         value = value.plus(bnbPrice.times(farm.lpTotalInQuoteToken).times(13.672**3));
       }
-      else if (farm.quoteTokenSymbol === QuoteToken.WAVAX) {
+      else */ if (farm.quoteTokenSymbol === QuoteToken.WAVAX) {
         value = value.plus(bnbPrice.times(farm.lpTotalInQuoteToken));
       } 
       else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {

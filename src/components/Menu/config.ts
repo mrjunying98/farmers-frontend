@@ -9,7 +9,7 @@ const config: MenuEntry[] = [
   /* {
     label: 'Farming Countdown',
     icon: 'TicketIcon',
-    href: 'https://polygonscan.com/block/countdown/19070000',
+    href: '',
   }, */
   {
     label: 'Trade',
@@ -73,7 +73,7 @@ const config: MenuEntry[] = [
       }, 
       {
         label: 'Docs',
-        href: 'https://farmersonlydefi.gitbook.io/farmersonly', // XXXXGITBOOK
+        href: 'https://docs.farmersonly.farm', // XXXXGITBOOK
       }, 
     ],
   },
@@ -83,7 +83,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'VFAT Tools',
-        href: 'https://vfat.tools/polygon/thunderyswap/',
+        href: 'https://vfat.tools/polygon/testyswap/',
       },
       {
         label: 'PolyPup UI',
@@ -97,19 +97,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'RugDoctor',
-        href: 'https://rugdoc.io/project/thunderyswap/',
+        href: 'https://rugdoc.io/project/testyswap/',
       },
       {
         label: 'DappRadar',
-        href: 'https://dappradar.com/polygon/defi/thunderyswap-finance',
+        href: 'https://dappradar.com/polygon/defi/testyswap-finance',
       },
       {
         label: 'Ape O\'Clock',
-        href: 'https://www.apeoclock.com/launch/thunderyswap-farm-launch/',
+        href: 'https://www.apeoclock.com/launch/testyswap-farm-launch/',
       },
       {
         label: 'JaGo',
-        href: 'https://jagosafer.io/thunderyswap',
+        href: 'https://jagosafer.io/testyswap',
       },
     ],
   }, */
@@ -119,7 +119,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Techrate',
-        href: 'https://github.com/thunderyswap/thundery-audits/blob/main/Techrate%20Check.pdf',
+        href: 'https://github.com/testyswap/testy-audits/blob/main/Techrate%20Check.pdf',
       },
     ],
   }, */

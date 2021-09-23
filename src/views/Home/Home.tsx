@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { Heading, Text, BaseLayout } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
+// import EarnAPRCard from './components/EarnAPRCard'
+import StakeAssetCard from './components/StakeAssetCard'
+import CakeContracts from './components/CakeContracts'
 import FarmStakingCard from './components/FarmStakingCard'
 import LotteryCard from './components/LotteryCard'
 import Timer from './components/Timer'
@@ -108,7 +111,7 @@ const Home: React.FC = () => {
         {/* <Heading as="h1" size="xxl" mb="15px" color="#FFFFFF" >
           {TranslateString(576, 'FarmersOnly Finance')}
         </Heading>
-        <Text color="#FFFFFF">{TranslateString(999, 'Avalanche based AMM and Yield Farm protocol. No coiners just don't get it!')}</Text> */}
+        <Text color="#FFFFFF">{TranslateString(999, 'Avalanche based AMM and Yield Farm protocol. Non-farmers just don't get it!™️')}</Text> */}
       </Hero>
       <div>
         <Cards>
@@ -116,6 +119,8 @@ const Home: React.FC = () => {
           <TwitterCard/>
           <CakeStats/>
           <TotalValueLockedCard />
+          <StakeAssetCard />
+          <CakeContracts />
         </Cards>
       </div>
     </Page>
