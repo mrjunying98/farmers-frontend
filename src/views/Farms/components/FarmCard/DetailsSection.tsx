@@ -78,7 +78,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
     
   // const totalValueString = Number(totalValueser).toLocaleString(undefined, { maximumFractionDigits: 0 })
 
-  if (lpLabel === 'CORN-WETH LP') {
+  if (lpLabel === 'CORN-WETH LP') { // XXXX
     
   return (
     <Wrapper>
@@ -105,7 +105,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   )
 } 
 
-  if (lpLabel === 'CORN-WAVAX LP') {
+  if (lpLabel === 'CORN-WAVAX LP') { // XXXX
     
   return (
     <Wrapper>
