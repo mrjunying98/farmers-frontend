@@ -10,11 +10,11 @@ const farms: FarmConfig[] = [
     otherExchange: 'Pangolin',
     decimal: 18,
     lpAddresses: {
-      43114: '0xffd8995E1016780AF85CfE5c29Cb8bE77A64BD15' // XXXXCORN-USDC
+      43114: '' // XXXXCORN-USDC
     },
     tokenSymbol: 'CORN',
     tokenAddresses: {
-      43114: '0x7a2EfB71a36B387e35e2Cc683435727E35C1e978' // XXXXCORN
+      43114: '0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE' // XXXXCORN
     },
     quoteTokenSymbol: QuoteToken.USDC,
     quoteTokenAdresses: contracts.usdc,
@@ -27,11 +27,11 @@ const farms: FarmConfig[] = [
     otherExchange: 'Pangolin',
     decimal: 18,
     lpAddresses: {
-      43114: '0x3a9D40e4341E341140dD37b700Ac75481665ED23' // XXXXCORN-WAVAX
+      43114: '' // XXXXCORN-WAVAX
     },
     tokenSymbol: 'CORN',
     tokenAddresses: {
-      43114: '0x7a2EfB71a36B387e35e2Cc683435727E35C1e978' // XXXXCORN
+      43114: '0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE' // XXXXCORN
     },
     quoteTokenSymbol: QuoteToken.WAVAX,
     quoteTokenAdresses: contracts.wavax,
@@ -44,11 +44,11 @@ const farms: FarmConfig[] = [
     lpSymbol: 'CORN',
     decimal: 18,
     lpAddresses: {
-      43114: '0xffd8995E1016780AF85CfE5c29Cb8bE77A64BD15' // XXXXCORN-USDC
+      43114: '' // XXXXCORN-USDC
     },
     tokenSymbol: 'CORN',
     tokenAddresses: {
-      43114: '0x7a2EfB71a36B387e35e2Cc683435727E35C1e978' // XXXXCORN
+      43114: '0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE' // XXXXCORN
     },
     quoteTokenSymbol: QuoteToken.USDC,
     quoteTokenAdresses: contracts.usdc,

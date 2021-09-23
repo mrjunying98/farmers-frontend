@@ -32,9 +32,9 @@ const CakeStats = () => {
   const cakeSupply = getBalanceNumber(circSupply);
   const marketCap = eggPrice.times(circSupply);
 
-  let testPerSecond = 0;
-  if(farms && farms[0] && farms[0].testPerSecond){
-    testPerSecond = new BigNumber(farms[0].testPerSecond).div(new BigNumber(10).pow(18)).toNumber();
+  let cornPerSecond = 0;
+  if(farms && farms[0] && farms[0].cornPerSecond){
+    cornPerSecond = new BigNumber(farms[0].cornPerSecond).div(new BigNumber(10).pow(18)).toNumber();
   }
 
   return (
@@ -65,7 +65,7 @@ const CakeStats = () => {
         </Row>
         <Row>
           <Text fontSize="14px" color="#FFFFFF">{TranslateString(540, 'New EGG/block')}</Text>
-          <Text bold fontSize="14px" color="#FFFFFF">{testPerSecond}</Text>
+          <Text bold fontSize="14px" color="#FFFFFF">{cornPerSecond}</Text>
         </Row>
       </CardBody>
     </StyledCakeStats>

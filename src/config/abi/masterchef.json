@@ -2,8 +2,8 @@
 		{
 			"inputs": [
 				{
-					"internalType": "contract TestCoin",
-					"name": "_test",
+					"internalType": "contract CornCoin",
+					"name": "_corn",
 					"type": "address"
 				},
 				{
@@ -167,7 +167,7 @@
 					"type": "bytes"
 				}
 			],
-			"name": "TestMintError",
+			"name": "CornMintError",
 			"type": "event"
 		},
 		{
@@ -182,7 +182,7 @@
 				{
 					"indexed": false,
 					"internalType": "uint256",
-					"name": "testPerSecond",
+					"name": "cornPerSecond",
 					"type": "uint256"
 				}
 			],
@@ -500,7 +500,7 @@
 					"type": "address"
 				}
 			],
-			"name": "pendingTest",
+			"name": "pendingCorn",
 			"outputs": [
 				{
 					"internalType": "uint256",
@@ -557,7 +557,7 @@
 				},
 				{
 					"internalType": "uint256",
-					"name": "accTestPerShare",
+					"name": "accCornPerShare",
 					"type": "uint256"
 				},
 				{
@@ -673,10 +673,10 @@
 		},
 		{
 			"inputs": [],
-			"name": "test",
+			"name": "corn",
 			"outputs": [
 				{
-					"internalType": "contract TestCoin",
+					"internalType": "contract CornCoin",
 					"name": "",
 					"type": "address"
 				}
@@ -686,7 +686,7 @@
 		},
 		{
 			"inputs": [],
-			"name": "testPerSecond",
+			"name": "cornPerSecond",
 			"outputs": [
 				{
 					"internalType": "uint256",
@@ -727,7 +727,7 @@
 			"inputs": [
 				{
 					"internalType": "uint256",
-					"name": "_testPerSecond",
+					"name": "_cornPerSecond",
 					"type": "uint256"
 				}
 			],

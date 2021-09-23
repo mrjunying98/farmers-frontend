@@ -32,9 +32,9 @@ const CakeContracts = () => {
   const cakeSupply = getBalanceNumber(circSupply);
   const marketCap = eggPrice.times(circSupply);
 
-  let testPerSecond = 0;
-  if(farms && farms[0] && farms[0].testPerSecond){
-    testPerSecond = new BigNumber(farms[0].testPerSecond).div(new BigNumber(10).pow(18)).toNumber();
+  let cornPerSecond = 0;
+  if(farms && farms[0] && farms[0].cornPerSecond){
+    cornPerSecond = new BigNumber(farms[0].cornPerSecond).div(new BigNumber(10).pow(18)).toNumber();
   }
 
   return (
@@ -44,16 +44,16 @@ const CakeContracts = () => {
           {TranslateString(999, 'Contracts')}
         </Heading>
         <Row>
-          <Text fontSize="14px" color="#FFFFFF">{TranslateString(999, 'CORN Token')}</Text>
-          <a target="_blank" rel="noreferrer noopener" href="https://cchain.explorer.avax.network/address/0x70B907f3F7231bE122100dac51C1995e6804E346/contracts" color="#fb2141">0x62BA727e2449EE3BE0573b4b102D7090c5977BFB</a> {/* XXXXCORN */}
+          <Text fontSize="14px" color="#FFFFFF">{TranslateString(999, 'CORN Coin')}</Text>
+          <a target="_blank" rel="noreferrer noopener" href="https://cchain.explorer.avax.network/address/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE/contracts" color="#fb2141">0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE</a> {/* XXXXCORN */}
         </Row>
         <Row>
           <Text fontSize="14px" color="#FFFFFF">{TranslateString(999, 'MasterChef')}</Text>
-        <a target="_blank" rel="noreferrer noopener" href="https://cchain.explorer.avax.network/address/0x70B907f3F7231bE122100dac51C1995e6804E346/contracts" color="#fb2141">0x62BA727e2449EE3BE0573b4b102D7090c5977BFB</a> {/* XXXXMASTERCHEF */}
+        <a target="_blank" rel="noreferrer noopener" href="https://cchain.explorer.avax.network/address/0x27271ECd985F1B666e51209B033d93ddC5a36076/contracts" color="#fb2141">0x27271ECd985F1B666e51209B033d93ddC5a36076</a> {/* XXXXMASTERCHEF */}
         </Row>
         <Row>
           <Text fontSize="14px" color="#FFFFFF">{TranslateString(999, 'Timelock')}</Text>
-        <a target="_blank" rel="noreferrer noopener" href="https://cchain.explorer.avax.network/address/0x70B907f3F7231bE122100dac51C1995e6804E346/contracts" color="#fb2141">0x62BA727e2449EE3BE0573b4b102D7090c5977BFB</a> {/* XXXXTIMELOCK */}
+        <a target="_blank" rel="noreferrer noopener" href="https://cchain.explorer.avax.network/address/0x00/contracts" color="#fb2141">0x00</a> {/* XXXXTIMELOCK */}
         </Row>
       </CardBody>
     </StyledCakeContracts>

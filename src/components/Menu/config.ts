@@ -16,12 +16,12 @@ const config: MenuEntry[] = [
     icon: 'TradeIcon',
     items: [
       {
-        label: 'Exchange',
-        href: 'https://app.pangolin.exchange/#/swap?outputCurrency=0x7a2EfB71a36B387e35e2Cc683435727E35C1e978', // XXXXCORN
+        label: 'Exchange (No Liq Yet)',
+        href: 'https://app.pangolin.exchange/#/swap?outputCurrency=0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE', // XXXXCORN
       },
       {
         label: 'Liquidity',
-        href: 'https://app.pangolin.exchange/#/add/0x7a2EfB71a36B387e35e2Cc683435727E35C1e978/undefined', // XXXXCORN
+        href: 'https://app.pangolin.exchange/#/add/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE/undefined', // XXXXCORN
       },
     ],
   },
@@ -51,15 +51,15 @@ const config: MenuEntry[] = [
     items: [
 	  {
 		label: 'Chartex',
-		href: 'https://chartex.pro/?symbol=AVAX_PANGOLIN%3ACORN%2FUSDCe.0x7a2EfB71a36B387e35e2Cc683435727E35C1e978&interval=5&theme=dark', // XXXXCORN
+		href: 'https://chartex.pro/?symbol=AVAX_PANGOLIN%3ACORN%2FUSDCe.0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE&interval=5&theme=dark', // XXXXCORN
 	  },
       {
         label: 'Pangolin',
-        href: 'https://info.pangolin.exchange/token/0x7a2EfB71a36B387e35e2Cc683435727E35C1e978', // XXXXCORN
+        href: 'https://info.pangolin.exchange/token/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE', // XXXXCORN
       },
       {
         label: 'DexGuru',
-        href: 'https://dex.guru/token/0x7a2EfB71a36B387e35e2Cc683435727E35C1e978-avalanche', // XXXXCORN
+        href: 'https://dex.guru/token/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE-avalanche', // XXXXCORN
       },
     ],
   },
@@ -83,11 +83,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'VFAT Tools',
-        href: 'https://vfat.tools/polygon/testyswap/',
+        href: 'https://vfat.tools/polygon/cornyswap/',
       },
       {
         label: 'PolyPup UI',
-        href: 'https://ui.polypup.finance/address/0xb0fae26e5c3282a5c919bba32d168aacd83b8194',
+        href: 'https://ui.polypup.finance/address/',
       },
     ],
   }, */
@@ -97,19 +97,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'RugDoctor',
-        href: 'https://rugdoc.io/project/testyswap/',
+        href: 'https://rugdoc.io/project/cornyswap/',
       },
       {
         label: 'DappRadar',
-        href: 'https://dappradar.com/polygon/defi/testyswap-finance',
+        href: 'https://dappradar.com/polygon/defi/cornyswap-finance',
       },
       {
         label: 'Ape O\'Clock',
-        href: 'https://www.apeoclock.com/launch/testyswap-farm-launch/',
+        href: 'https://www.apeoclock.com/launch/cornyswap-farm-launch/',
       },
       {
         label: 'JaGo',
-        href: 'https://jagosafer.io/testyswap',
+        href: 'https://jagosafer.io/cornyswap',
       },
     ],
   }, */
@@ -119,7 +119,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Techrate',
-        href: 'https://github.com/testyswap/testy-audits/blob/main/Techrate%20Check.pdf',
+        href: 'https://github.com/cornyswap/corny-audits/blob/main/Techrate%20Check.pdf',
       },
     ],
   }, */

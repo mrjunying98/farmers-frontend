@@ -71,7 +71,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
     ? `$${Number(new BigNumber(totalValueFormated).times(1.346)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
-    const totalValueTest = totalValueFormated
+    const totalValueCorn = totalValueFormated
     ? `$${Number(totalValueFormated).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
@@ -145,7 +145,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
       {!removed && (
         <Flex justifyContent="space-between">
           <Text color="#FFFFFF">{TranslateString(23, 'Total Liquidity')}:</Text>
-          <Text color="#FFFFFF">{totalValueTest}</Text>
+          <Text color="#FFFFFF">{totalValueCorn}</Text>
         </Flex>
       )}
       <Flex justifyContent="flex-start">

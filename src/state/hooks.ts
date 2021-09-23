@@ -70,7 +70,7 @@ export const usePoolFromPid = (sousId): Pool => {
 // Prices
 
 export const usePriceBnbBusd = (): BigNumber => {
-  const pid = 0; // WAVAX-USDC LP : DEFAULT 7
+  const pid = 7; // WAVAX-USDC LP : DEFAULT 7
   const farm = useFarmFromPid(pid)
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
 }
