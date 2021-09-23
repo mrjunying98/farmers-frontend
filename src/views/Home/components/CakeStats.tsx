@@ -61,7 +61,7 @@ const CakeStats = () => {
         </Row>
 		<Row>
           <Text fontSize="14px" color="#FFFFFF">{TranslateString(999, 'MAX Supply')}</Text>
-          <CardValue fontSize="14px" value={10000} decimals={0} />
+          <CardValue fontSize="14px" value={7000} decimals={0} />
         </Row>
         <Row>
           <Text fontSize="14px" color="#FFFFFF">{TranslateString(540, 'New EGG/block')}</Text>
