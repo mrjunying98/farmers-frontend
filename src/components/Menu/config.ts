@@ -41,7 +41,7 @@ const config: MenuEntry[] = [
      href: '/dividends',
   },
   {
-     label: 'NFT (Coming Soon)', // XXXXSOON
+     label: 'NFTs (Coming Soon)', // XXXXSOON
      icon: 'NftIcon',
      href: '/nft',
   },
@@ -123,6 +123,11 @@ const config: MenuEntry[] = [
       },
     ],
   }, */
+  {
+     label: 'Contact Dev', // XXXXSOON
+     icon: 'TelegramIcon',
+     href: 'https://t.me/FarmersOnlyDev',
+  },
 ]
 
 export default config
