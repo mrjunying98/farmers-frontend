@@ -23,11 +23,11 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
   let decimalHelper
   let valHelper
 
-  if (tokenName === 'USDT') {
+  if (tokenName === 'USDT.E' || tokenName === 'USDC.E') {
     maxHelper = new BigNumber(max).times(10**12);
     decimalHelper = 6;
     valHelper = new BigNumber(val).times(10**(-12));
-  } else if (tokenName === 'WBTC') {
+  } else if (tokenName === 'WBTC.E') {
     maxHelper = new BigNumber(max).times(10**10);
     decimalHelper = 8;
     valHelper = new BigNumber(val).times(10**(-10));
