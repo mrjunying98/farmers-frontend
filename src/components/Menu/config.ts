@@ -16,7 +16,7 @@ const config: MenuEntry[] = [
     icon: 'TradeIcon',
     items: [
       {
-        label: 'Exchange (No Liq Yet)',
+        label: 'Exchange (NO LIQ YET)',
         href: 'https://app.pangolin.exchange/#/swap?outputCurrency=0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE', // XXXXCORN
       },
       {
@@ -49,16 +49,16 @@ const config: MenuEntry[] = [
     label: 'Info',
     icon: 'InfoIcon',
     items: [
-	  {
-		label: 'Chartex',
-		href: 'https://chartex.pro/?symbol=AVAX_PANGOLIN%3ACORN%2FUSDCe.0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE&interval=5&theme=dark', // XXXXCORN
-	  },
+	   {
+		  label: 'Chartex (NO LIQ YET)',
+		  href: 'https://chartex.pro/?symbol=AVAX_PANGOLIN%3ACORN%2FUSDCe.0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE&interval=5&theme=dark', // XXXXCORN
+	   },
       {
-        label: 'Pangolin',
+        label: 'Pangolin (NO LIQ YET)',
         href: 'https://info.pangolin.exchange/token/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE', // XXXXCORN
       },
       {
-        label: 'DexGuru',
+        label: 'DexGuru (NO LIQ YET)',
         href: 'https://dex.guru/token/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE-avalanche', // XXXXCORN
       },
     ],
