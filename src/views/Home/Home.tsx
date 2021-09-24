@@ -96,7 +96,7 @@ const Home: React.FC = () => {
   return (
     <Page>
          <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >{
-            TranslateString(999, 'CORN token initial liquidity will be added on Sep 24, 9:00PM UTC')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
+            TranslateString(999, 'CORN token initial liquidity will be provided on Sep 24, 9:00PM UTC')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
         </Heading>
         <Text color="#FFFFFF" >{TranslateString(999, 'Then farming will start on Sep 28, 8:00PM UTC. So for now, just get ready to buy CORN!')} {/* 'But you can already stake your tokens!' */}
         </Text>
