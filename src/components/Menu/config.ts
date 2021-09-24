@@ -49,10 +49,6 @@ const config: MenuEntry[] = [
     label: 'Info',
     icon: 'InfoIcon',
     items: [
-	   {
-		  label: 'Chartex',
-		  href: 'https://chartex.pro/?symbol=AVAX_PANGOLIN%3ACORN%2FUSDCe.0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE&interval=5&theme=dark', // XXXXCORN
-	   },
       {
         label: 'Pangolin',
         href: 'https://info.pangolin.exchange/token/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE', // XXXXCORN
