@@ -46,9 +46,8 @@ const Hero = ({tokenMode,dividendsMode}) => {
         {/* <Heading as="h1" size="lg" mb="12px" color="#fb3321" >
           {TranslateString(999, 'Yield Farming started!')}
         </Heading>
-        <Heading as="h1" size="sm" mb="27px" color="#fb3321" >
-          {TranslateString(999, 'At block #19070000')}
-        </Heading> */}
+        <Text color="#FFFFFF" >{TranslateString(999, 'On Sep 28, 8:00PM UTC')}
+        </Text> */}
         <Title color="#FFFFFF" style={{ textAlign: 'center' }}>{
           !tokenMode ?
             TranslateString(10002, 'Stake tokens to earn CORN')
