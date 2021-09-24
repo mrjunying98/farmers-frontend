@@ -25,7 +25,7 @@ const Menu = (props) => {
       setLang={setSelectedLanguage}
       cakePriceUsd={cakePriceUsd.toNumber()}
       links={config}
-      priceLink="https://info.pangolin.exchange/#/token/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE" // XXXXCORN
+      priceLink="https://info.pangolin.exchange/#/pair/0xc6a9dc8569ada7626b77e04445e93227d0790478" // XXXXCORN
       {...props}
     />
   )
