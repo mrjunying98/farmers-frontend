@@ -68,6 +68,10 @@ const config: MenuEntry[] = [
     icon: 'MoreIcon',
     items: [
       {
+        label: 'vfat.tools',
+        href: 'https://vfat.tools/avax/farmersonly/',
+      },
+      {
         label: 'Github',
         href: 'https://github.com/farmersonlydefi', // XXXXGITHUB
       }, 
