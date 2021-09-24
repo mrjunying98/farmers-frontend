@@ -13,6 +13,10 @@ import CakeStats from './components/CakeStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
 import TwitterCard from './components/TwitterCard'
 
+const RDBadge = styled.a`
+position: fixed;
+right: 0px;
+`
 
 const Title = styled(Heading).attrs({ as: 'h1', size: 'xl' })`
   color: ${({ theme }) => "#FFFFFF"};
@@ -133,6 +137,8 @@ const Home: React.FC = (farmsProps) => {
 
   return (
     <>
+      <RDBadge  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={270} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></RDBadge>
+
     <Hero tokenMode={false} dividendsMode />
     <Page>
       {/* <Heading as="h1" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
@@ -168,7 +174,6 @@ const Home: React.FC = (farmsProps) => {
         
       {/* <Image src="/images/egg/LogoTextNewDark.png" alt="illustration" width={1218} height={198} responsive /> */}
       </Page>
-        <a  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={315} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></a>
 
       </>
   )

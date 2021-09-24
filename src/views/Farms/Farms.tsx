@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback, useState } from 'react'
+import styled from 'styled-components'
 import { Route, useRouteMatch } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
@@ -17,6 +18,11 @@ import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import Hero from './components/Hero'
 import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider'
+
+const RDBadge = styled.a`
+position: fixed;
+right: 0px;
+`
 
 export interface FarmsProps{
   tokenMode?: boolean
@@ -113,6 +119,8 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
 
   return (
     <>
+      <RDBadge  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={270} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></RDBadge>
+
     <Hero tokenMode={tokenMode} dividendsMode={dividendsMode}/>
     <Page>
       {/* <Heading as="h1" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
@@ -140,7 +148,6 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
       </div>
       {/* <Image src="/images/egg/LogoTextNewDark.png" alt="illustration" width={1218} height={198} responsive /> */}
       </Page>
-      <a  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={315} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></a>
       </>
   )
 
