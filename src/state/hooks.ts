@@ -76,7 +76,7 @@ export const usePriceBnbBusd = (): BigNumber => {
 }
 
 export const usePriceCakeBusd = (): BigNumber => {
-  const pid = 0; // CORN-USDC LP : DEFAULT 11
+  const pid = 11; // CORN-USDC LP : DEFAULT 11
   const farm = useFarmFromPid(pid);
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
 }

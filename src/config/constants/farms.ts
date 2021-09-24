@@ -3,14 +3,14 @@ import { FarmConfig, QuoteToken } from './types'
 
 const farms: FarmConfig[] = [
 
-  /* {
+  {
     pid: 11,
     risk: 5,
     lpSymbol: 'CORN-USDC.e LP',
     otherExchange: 'Pangolin',
     decimal: 18,
     lpAddresses: {
-      43114: '' // XXXXCORN-USDC
+      43114: '0xc6a9dc8569ada7626b77e04445e93227d0790478' // XXXXCORN-USDC
     },
     tokenSymbol: 'CORN',
     tokenAddresses: {
@@ -20,7 +20,7 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.usdc,
   },
 
-  {
+  /* {
     pid: 12,
     risk: 5,
     lpSymbol: 'CORN-WAVAX LP',
@@ -35,7 +35,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.WAVAX,
     quoteTokenAdresses: contracts.wavax,
-  },
+  }, */
 
     {
     pid: 10,
@@ -44,7 +44,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'CORN',
     decimal: 18,
     lpAddresses: {
-      43114: '' // XXXXCORN-USDC
+      43114: '0xc6a9dc8569ada7626b77e04445e93227d0790478' // XXXXCORN-USDC
     },
     tokenSymbol: 'CORN',
     tokenAddresses: {
@@ -52,7 +52,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.USDC,
     quoteTokenAdresses: contracts.usdc,
-  }, */
+  },
 
   {
     pid: 7,

@@ -16,7 +16,7 @@ const config: MenuEntry[] = [
     icon: 'TradeIcon',
     items: [
       {
-        label: 'Exchange (NO LIQ YET)',
+        label: 'Exchange',
         href: 'https://app.pangolin.exchange/#/swap?outputCurrency=0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE', // XXXXCORN
       },
       {
@@ -50,15 +50,15 @@ const config: MenuEntry[] = [
     icon: 'InfoIcon',
     items: [
 	   {
-		  label: 'Chartex (NO LIQ YET)',
+		  label: 'Chartex',
 		  href: 'https://chartex.pro/?symbol=AVAX_PANGOLIN%3ACORN%2FUSDCe.0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE&interval=5&theme=dark', // XXXXCORN
 	   },
       {
-        label: 'Pangolin (NO LIQ YET)',
+        label: 'Pangolin',
         href: 'https://info.pangolin.exchange/token/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE', // XXXXCORN
       },
       {
-        label: 'DexGuru (NO LIQ YET)',
+        label: 'DexGuru',
         href: 'https://dex.guru/token/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE-avalanche', // XXXXCORN
       },
     ],
