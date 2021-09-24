@@ -136,10 +136,10 @@ const FarmedStakingCard = () => {
           <Label>~${(eggPrice * cakeBalance).toFixed(2)}</Label>
         </Block>
         <Actions>
-          <Button onClick={addWatchJaguarToken} size="sm" mb={2}>
+          <Button onClick={addWatchJaguarToken} size="sm" style={{ marginBottom: 0 }} mb={2}>
             + Add CORN to <img style={{ marginLeft: 8 }} width={16} src="https://jaguarswap.com/images/tokens/metamask.png" alt="metamask logo" />
           </Button>
-          {account ? (
+          {/* {account ? (
             <Button
               id="harvest-all"
               disabled={balancesWithValue.length <= 0 || pendingTx}
@@ -152,7 +152,7 @@ const FarmedStakingCard = () => {
             </Button>
           ) : (
             <UnlockButton fullWidth />
-          )}
+          )} */}
         </Actions>
       </CardBody>
     </StyledFarmStakingCard>
