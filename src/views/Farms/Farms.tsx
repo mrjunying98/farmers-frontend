@@ -23,6 +23,7 @@ export interface FarmsProps{
   dividendsMode?: boolean
 }
 
+
 const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const { path } = useRouteMatch()
   const TranslateString = useI18n()
@@ -136,10 +137,10 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
             {farmsList(inactiveFarms, true)}
           </Route>
         </FlexLayout>
-        <a  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={315} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></a>
       </div>
       {/* <Image src="/images/egg/LogoTextNewDark.png" alt="illustration" width={1218} height={198} responsive /> */}
       </Page>
+      <a  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={315} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></a>
       </>
   )
 

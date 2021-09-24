@@ -14,6 +14,18 @@ import TotalValueLockedCard from './components/TotalValueLockedCard'
 import TwitterCard from './components/TwitterCard'
 
 
+const Badge = styled(BaseLayout)`
+
+     background-image: url('/images/egg/rugdoc-badge.png');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+       background-size: 1300px;
+  padding-bottom: 300px;
+  padding-top: px;
+  margin-bottom: -362px;
+  background-position: right;
+  `
+
 const Hero = styled.div`
   align-items: center;
   display: flex;
@@ -94,6 +106,8 @@ const Home: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
+
+<>
     <Page>
          <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >{
             TranslateString(999, 'CORN token initial liquidity will be provided on Sep 24, 9:00PM UTC')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
@@ -121,12 +135,11 @@ const Home: React.FC = () => {
           <TotalValueLockedCard />
           <StakeAssetCard />
           <CakeContracts />
-
         </Cards>
-        <a  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={315} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></a>
       </div>
-
     </Page>
+  <a  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={315} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></a>
+  </>
   )
 }
 

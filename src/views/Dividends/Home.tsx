@@ -5,68 +5,100 @@ import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import FlexLayout from 'components/layout/Flex'
 import { Route, useRouteMatch } from 'react-router-dom'
-
+import Container from 'components/layout/Container'
 import FarmStakingCard from './components/FarmStakingCard'
 import LotteryCard from './components/LotteryCard'
 import Timer from './components/Timer'
 import CakeStats from './components/CakeStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
 import TwitterCard from './components/TwitterCard'
-import Hero from '../Farms/components/Hero'
 
 
-/* const Hero = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: auto;
-  margin-bottom: 32px;
-  padding-top: 116px;
-  text-align: center;
-  position: relative;
-  z-index:2;
-  border-radius: 30px;
-  
-  &:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.1;
-    background-image: url('/images/egg/3.png');
-    background-repeat: no-repeat;
-    background-position: top center;    
-    border-radius: 30px;
-  }
+const Title = styled(Heading).attrs({ as: 'h1', size: 'xl' })`
+  color: ${({ theme }) => "#FFFFFF"};
+  margin-bottom: 15px;
+`
 
-  ${({ theme }) => theme.mediaQueries.lg} {
-    
-    padding-top: 0;
-    position: relative;
-    z-index: 2;
-    height: 120px;
+const Blurb = styled(Text)`
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+`
 
-    &:before {
-      content: ' ';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 1;
-      background-image: url('/images/egg/vaults-hero.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    }
-  }
-` */
+let StyledHero
+
+
+const Hero = ({tokenMode,dividendsMode}) => {
+  const TranslateString = useI18n()
+  if (!dividendsMode) {
+
+    StyledHero = styled.div`
+
+  background-image: url('/images/egg/banner-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 750px;
+  padding-bottom: 277px;
+  padding-top: 32px;
+  margin-bottom: -262px;
+`
+
+  return (
+    <StyledHero>
+      <Container>
+        <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >{
+            TranslateString(999, 'CORN token initial liquidity will be provided on Sep 24, 9:00PM UTC')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
+        </Heading>
+        <Text color="#FFFFFF" >{TranslateString(999, 'Then farming will start on Sep 28, 8:00PM UTC. So for now, just get ready to buy CORN!')} {/* 'But you can already stake your tokens!' */}
+        </Text>
+      <Timer />
+        {/* <Heading as="h1" size="lg" mb="12px" color="#fb3321" >
+          {TranslateString(999, 'Yield Farming started!')}
+        </Heading>
+        <Heading as="h1" size="sm" mb="27px" color="#fb3321" >
+          {TranslateString(999, 'At block #19070000')}
+        </Heading> */}
+        <Title color="#FFFFFF" style={{ textAlign: 'center' }}>{
+          !tokenMode ?
+            TranslateString(10002, 'Stake tokens to earn CORN')
+            :
+            TranslateString(999, 'Stake LP tokens to earn CORN')
+          
+        }</Title>
+        <Blurb color="#FFFFFF" style={{ textAlign: 'center' }}>{TranslateString(10000, 'Deposit fees will be used to buyback CORN')}</Blurb>
+      </Container>
+    </StyledHero>
+  )
+}
+
+StyledHero = styled.div`
+  background-image: url('/images/egg/banner-bg1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 630px;
+  padding-bottom: 47px;
+  padding-top: 44px;
+  margin-bottom: -321px;
+`
+
+  return (
+    <StyledHero>
+      <Container>
+        {/* <Heading as="h1" size="lg" mb="12px" color="#fb3321" >
+          {TranslateString(999, 'Yield Farming started!')}
+        </Heading>
+        <Heading as="h1" size="sm" mb="27px" color="#fb3321" >
+          {TranslateString(999, 'At block #19070000')}
+        </Heading> */}
+        <Title color="#FFFFFF" style={{ textAlign: 'center' }}>{
+            TranslateString(999, 'CORN Dividends')
+          
+        }</Title>
+        <Blurb color="#FFFFFF" style={{ textAlign: 'center' }}>{TranslateString(999, 'Stake CORN to earn new tokens')}</Blurb>
+      </Container>
+    </StyledHero>
+  )
+}
 
 
 
@@ -74,6 +106,7 @@ const Cards = styled(BaseLayout)`
 display: flex;
   justify-content: center;
   margin-bottom: 48px;
+  padding-top: 285px;
 
   & > div {
 
@@ -124,7 +157,6 @@ const Home: React.FC = (farmsProps) => {
 
          
         </Cards>
-                <a  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={315} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></a>
 
         </div>
           {/* <Route exact path={`${path}`}>
@@ -136,6 +168,8 @@ const Home: React.FC = (farmsProps) => {
         
       {/* <Image src="/images/egg/LogoTextNewDark.png" alt="illustration" width={1218} height={198} responsive /> */}
       </Page>
+        <a  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={315} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></a>
+
       </>
   )
 }
