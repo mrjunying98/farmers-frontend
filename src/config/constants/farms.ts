@@ -20,14 +20,14 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.usdc,
   },
 
-  /* {
+  {
     pid: 12,
     risk: 5,
     lpSymbol: 'CORN-WAVAX LP',
     otherExchange: 'Pangolin',
     decimal: 18,
     lpAddresses: {
-      43114: '' // XXXXCORN-WAVAX
+      43114: '0x66ba9619ca10bf77176afecc2486344fa9bc65b3' // XXXXCORN-WAVAX
     },
     tokenSymbol: 'CORN',
     tokenAddresses: {
@@ -35,7 +35,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.WAVAX,
     quoteTokenAdresses: contracts.wavax,
-  }, */
+  },
 
     {
     pid: 10,
