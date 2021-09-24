@@ -16,6 +16,7 @@ import TwitterCard from './components/TwitterCard'
 const RDBadge = styled.a`
 position: fixed;
 right: 0px;
+top: 7px;
 `
 
 const Title = styled(Heading).attrs({ as: 'h1', size: 'xl' })`

@@ -22,6 +22,7 @@ import Divider from './components/Divider'
 const RDBadge = styled.a`
 position: fixed;
 right: 0px;
+top: 7px;
 `
 
 export interface FarmsProps{
