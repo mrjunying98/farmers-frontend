@@ -121,8 +121,11 @@ const Home: React.FC = () => {
           <TotalValueLockedCard />
           <StakeAssetCard />
           <CakeContracts />
+
         </Cards>
+        <a  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={315} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></a>
       </div>
+
     </Page>
   )
 }
