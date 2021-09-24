@@ -96,20 +96,24 @@ const config: MenuEntry[] = [
     ],
   }, */
   {
-    label: 'Listings',
+    label: 'Audits/Listings',
     icon: 'AuditIcon',
     items: [
       {
-        label: 'RugDoctor',
+        label: 'RugDoc Review',
         href: 'https://rugdoc.io/project/farmersonly-2/',
       },
       {
-        label: 'DappRadar',
+        label: 'DappRadar Listing',
         href: 'https://dappradar.com/avalanche/defi/farmersonly-finance',
       },
       {
-        label: 'Ape O\'Clock',
+        label: 'Ape O\'Clock Listing',
         href: 'https://www.apeoclock.com/launch/farmers-only-farm-launch-2/',
+      },
+      {
+        label: 'TechRate Check',
+        href: 'https://github.com/farmersonlydefi/farmers-audits/blob/main/FarmersOnlyMasterChef.pdf',
       }, /*
       {
         label: 'JaGo',
