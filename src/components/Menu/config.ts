@@ -51,7 +51,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Pangolin',
-        href: 'https://info.pangolin.exchange/token/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE', // XXXXCORN
+        href: 'https://info.pangolin.exchange/#/token/0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE', // XXXXCORN
       },
       {
         label: 'DexGuru',

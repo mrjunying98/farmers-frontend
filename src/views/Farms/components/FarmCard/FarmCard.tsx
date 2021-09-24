@@ -118,11 +118,11 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   //  ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
   //  : '-'
 
-  let multipliier = 200 // 200
+  const multipliier = 200 // 200
   
-  if (farm.pid === 12) {
+  /* if (farm.pid === 12) {
 	multipliier = 100; // 100
-  }
+  } */
   
   const lpLabel = farm.lpSymbol
   const earnLabel = 'CORN'
