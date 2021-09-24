@@ -91,28 +91,28 @@ const config: MenuEntry[] = [
       },
     ],
   }, */
-  /* {
+  {
     label: 'Listings',
     icon: 'AuditIcon',
     items: [
       {
         label: 'RugDoctor',
-        href: 'https://rugdoc.io/project/cornyswap/',
+        href: 'https://rugdoc.io/project/farmersonly-2/',
       },
       {
         label: 'DappRadar',
-        href: 'https://dappradar.com/polygon/defi/cornyswap-finance',
+        href: 'https://dappradar.com/avalanche/defi/farmersonly-finance',
       },
       {
         label: 'Ape O\'Clock',
-        href: 'https://www.apeoclock.com/launch/cornyswap-farm-launch/',
-      },
+        href: 'https://www.apeoclock.com/launch/farmers-only-farm-launch-2/',
+      }, /*
       {
         label: 'JaGo',
         href: 'https://jagosafer.io/cornyswap',
-      },
+      }, */
     ],
-  }, */
+  },
   /* {
     label: 'Audits/Checks',
     icon: 'AuditIcon',
