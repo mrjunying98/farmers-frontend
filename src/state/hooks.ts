@@ -97,8 +97,8 @@ export const useTotalValue = (): BigNumber => {
       } */
 
 
-      /* if (farm.pid === 13) {
-        value = value.plus(bnbPrice.times(farm.lpTotalInQuoteToken).times(13.672**3));
+      /* if (farm.pid === 5) {
+        value = value.plus(farm.lpTotalInQuoteToken);
       }
       else */ if (farm.quoteTokenSymbol === QuoteToken.WAVAX) {
         value = value.plus(bnbPrice.times(farm.lpTotalInQuoteToken));
