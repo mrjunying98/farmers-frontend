@@ -53,7 +53,7 @@ const CakeContracts = () => {
         </Row>
         <Row>
           <Text fontSize="14px" color="#FFFFFF">{TranslateString(999, 'Timelock')}</Text>
-        <a target="_blank" rel="noreferrer noopener" href="https://cchain.explorer.avax.network/address/0x1a51e6db621F6Fc215B0912523105C7cD5417461/contracts" color="#fb2141">0x1a51e6db621F6Fc215B0912523105C7cD5417461</a> {/* XXXXTIMELOCK */}
+        <a target="_blank" rel="noreferrer noopener" href="https://cchain.explorer.avax.network/address/0xc14BFa11c072d5e5735092CEe376Be905B9D7359/contracts" color="#fb2141">0xc14BFa11c072d5e5735092CEe376Be905B9D7359</a> {/* XXXXTIMELOCK */}
         </Row>
       </CardBody>
     </StyledCakeContracts>
