@@ -67,8 +67,13 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
     ? `$${Number(new BigNumber(totalValueFormated).times(15.097**3)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 	
+	const totalValueUSDC = totalValueFormated
+	? `$${Number(new BigNumber(totalValueFormated).times(70)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
+    : '-'
+	
+	
 	const totalValueCORNWAVAX = totalValueFormated
-    ? `$${Number(new BigNumber(totalValueFormated).times(72.2)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
+    ? `$${Number(new BigNumber(totalValueFormated).times(70)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
     const totalValueCorn = totalValueFormated
@@ -121,6 +126,34 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         <Flex justifyContent="space-between">
           <Text color="#FFFFFF">{TranslateString(23, 'Total Liquidity')}:</Text>
           <Text color="#FFFFFF">{totalValueCORNWAVAX}</Text>
+        </Flex>
+      )}
+      <Flex justifyContent="flex-start">
+        <Link external href={bscScanAddress} bold={false}>
+          {TranslateString(356, 'View on Avax Explorer')}
+        </Link>
+      </Flex>
+    </Wrapper>
+  )
+} 
+
+
+  if (lpLabel === 'USDC.e') { // XXXX
+    
+  return (
+    <Wrapper>
+      <Flex justifyContent="space-between">
+        <Text color="#FFFFFF">{TranslateString(316, 'Stake')}:</Text>
+        <StyledLinkExternal href={
+          externalLink
+        }>
+          {lpLabel}
+        </StyledLinkExternal>
+      </Flex>
+      {!removed && (
+        <Flex justifyContent="space-between">
+          <Text color="#FFFFFF">{TranslateString(23, 'Total Liquidity')}:</Text>
+          <Text color="#FFFFFF">{totalValueUSDC}</Text>
         </Flex>
       )}
       <Flex justifyContent="flex-start">
