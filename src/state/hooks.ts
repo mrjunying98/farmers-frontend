@@ -104,16 +104,16 @@ export const useTotalValue = (): BigNumber => {
       } */
 
 
-      /* if (farm.pid === 5) {
-        value = value.plus(farm.lpTotalInQuoteToken);
+      if (farm.pid === 4) {
+        value = value.plus(uuPrice.times(farm.lpTotalInQuoteToken))
       }
-      else */ if (farm.quoteTokenSymbol === QuoteToken.WAVAX) {
+      else if (farm.quoteTokenSymbol === QuoteToken.WAVAX) {
         value = value.plus(bnbPrice.times(farm.lpTotalInQuoteToken));
       } 
       else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
         value = value.plus(cakePrice.times(farm.lpTotalInQuoteToken));
       } 
-	  else if (farm.quoteTokenSymbol === QuoteToken.USDC && farm.tokenSymbol === "USDT.e") { // USDC.e-USDT.e
+	  else if (farm.pid === 9) { // USDC.e-USDT.e
 		value = value.plus(bnbPrice.times(farm.lpTotalInQuoteToken));
 	  }
       else {

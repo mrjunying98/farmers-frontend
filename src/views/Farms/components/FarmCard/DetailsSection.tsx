@@ -73,7 +73,6 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
 	? `$${Number(new BigNumber(totalValueFormated).times(70)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 	
-	
 	const totalValueCORNWAVAX = totalValueFormated
     ? `$${Number(new BigNumber(totalValueFormated).times(70)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
