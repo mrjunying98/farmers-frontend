@@ -93,6 +93,10 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           totalValue = totalValue.times(61.060365);
         } 
 		
+		else if (farm.pid === 9) { // USDC.e-USDT.e
+			totalValue = totalValue.times(10.202**10);
+		}
+		
 		else { // TUTTE LE ALTRE
           totalValue = totalValue.times(1/80.2);
         } 

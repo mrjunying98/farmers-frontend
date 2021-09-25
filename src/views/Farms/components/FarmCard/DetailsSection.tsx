@@ -63,8 +63,8 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
     `https://polyzap.app/#/add/${liquidityUrlPathParts}`;
   }
 
-    const totalValueCORNWETH = totalValueFormated
-    ? `$${Number(new BigNumber(totalValueFormated).times(15.097**3)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
+    const totalValueUSDCUSDT = totalValueFormated
+    ? `$${Number(new BigNumber(totalValueFormated).times(10**12)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 	
 	const totalValueUSDC = totalValueFormated
@@ -83,7 +83,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
     
   // const totalValueString = Number(totalValueser).toLocaleString(undefined, { maximumFractionDigits: 0 })
 
-  if (lpLabel === 'CORN-WETH LP') { // XXXX
+  if (lpLabel === 'USDC.e-USDT.e LP') { // XXXX
     
   return (
     <Wrapper>
@@ -98,7 +98,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
       {!removed && (
         <Flex justifyContent="space-between">
           <Text color="#FFFFFF">{TranslateString(23, 'Total Liquidity')}:</Text>
-          <Text color="#FFFFFF">{totalValueCORNWETH}</Text>
+          <Text color="#FFFFFF">{totalValueUSDCUSDT}</Text>
         </Flex>
       )}
       <Flex justifyContent="flex-start">

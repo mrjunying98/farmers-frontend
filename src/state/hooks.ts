@@ -106,6 +106,9 @@ export const useTotalValue = (): BigNumber => {
       else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
         value = value.plus(cakePrice.times(farm.lpTotalInQuoteToken));
       } 
+	  else if (farm.pid === 9) { // USDC.e-USDT.e
+		value = new BigNumber(value).times(1.04).plus(farm.lpTotalInQuoteToken);
+	  }
       else {
         value = value.plus(farm.lpTotalInQuoteToken); // USDC etc
       }
