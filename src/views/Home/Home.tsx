@@ -20,6 +20,12 @@ right: 0px;
 top: 7px;
 `
 
+const RDLiq = styled.a`
+position: fixed;
+right: 15px;
+top: 110px;
+`
+
 const Hero = styled.div`
   align-items: center;
   display: flex;
@@ -103,6 +109,7 @@ const Home: React.FC = () => {
 
 <>
   <RDBadge  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={250} src="https://rugdoc.io/assets/2021/06/rugdoc-review-badge-with-glow.png" alt="rugdoc badge" /></RDBadge>
+  <RDLiq  target="_blank" rel="noreferrer" href="https://rugdoc.io/project/farmersonly-2/"><img width={217} src="https://farmersonly.farm/images/egg/RugDoc-LiqLock-Badge.png" alt="rugdoc liq locked" /></RDLiq>
 
     <Page>
          <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >{
