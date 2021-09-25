@@ -17,7 +17,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://app.pangolin.exchange/#/swap?outputCurrency=0xFcA54c64BC44ce2E72d621B6Ed34981e53B66CaE', // XXXXCORN
+        href: 'https://buy.farmersonly.farm', // XXXXCORN
       },
       {
         label: 'Liquidity',
