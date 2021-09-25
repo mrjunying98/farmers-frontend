@@ -128,7 +128,7 @@ const config: MenuEntry[] = [
     ],
   }, */
   {
-     label: 'Contact Dev', // XXXXSOON
+     label: 'Report a Bug', // XXXXSOON
      icon: 'TelegramIcon',
      href: 'https://t.me/FarmersOnlyDev',
   },
