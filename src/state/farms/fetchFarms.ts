@@ -5,6 +5,7 @@ import multicall from 'utils/multicall'
 import { getMasterChefAddress } from 'utils/addressHelpers'
 import farmsConfig from 'config/constants/farms'
 import { QuoteToken } from '../../config/constants/types'
+import { totalValueUU } from '../../views/Farms/components/FarmCard/DetailsSection'
 
 const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
 
@@ -64,14 +65,12 @@ const fetchFarms = async () => {
       if(farmConfig.isTokenOnly){
         tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals));
 		
-		if(farmConfig.tokenSymbol === "USDT.e" && farmConfig.quoteTokenSymbol === QuoteToken.USDC){
-          tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals)).plus(3);
+		if(farmConfig.pid === 9){
+          tokenAmount = totalValueUU;
 		  tokenPriceVsQuote = new BigNumber(1);
-        }
-        
-        else if(farmConfig.tokenSymbol === QuoteToken.USDC && farmConfig.quoteTokenSymbol === QuoteToken.USDC){
+        } else if (farmConfig.tokenSymbol === QuoteToken.USDC && farmConfig.quoteTokenSymbol === QuoteToken.USDC){
           tokenPriceVsQuote = new BigNumber(1);
-        }else{
+        } else {
           tokenPriceVsQuote = new BigNumber(quoteTokenBalanceLP).div(new BigNumber(tokenBalanceLP));
         }
         lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote);

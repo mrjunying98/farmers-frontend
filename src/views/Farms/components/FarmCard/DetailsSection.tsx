@@ -37,6 +37,8 @@ const StyledLinkExternal = styled(LinkExternal)`
   }
 `
 
+let totalValueUSDCUSDT
+
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
   isTokenOnly,
   bscScanAddress,
@@ -63,7 +65,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
     `https://polyzap.app/#/add/${liquidityUrlPathParts}`;
   }
 
-    const totalValueUSDCUSDT = totalValueFormated
+    totalValueUSDCUSDT = totalValueFormated
     ? `$${Number(new BigNumber(totalValueFormated).times(10**12)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 	
@@ -188,8 +190,9 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
       </Flex>
     </Wrapper>
   )
-
+	
 }
 
+export const totalValueUU = totalValueUSDCUSDT
 
 export default DetailsSection
