@@ -83,9 +83,9 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           totalValue = totalValue.times(16.91**3);
         } */
 		
-		/* if (farm.pid === 12) {
-          totalValue = totalValue.times(1.346);
-        } */
+		if (farm.pid === 12) {
+          totalValue = totalValue.times(72.2);
+        } 
 		
 		/* if (farm.pid === 5) {
           totalValue = totalValue.times(10**12);

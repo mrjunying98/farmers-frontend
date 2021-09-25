@@ -68,7 +68,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
     : '-'
 	
 	const totalValueCORNWAVAX = totalValueFormated
-    ? `$${Number(new BigNumber(totalValueFormated).times(1.346)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
+    ? `$${Number(new BigNumber(totalValueFormated).times(72.2)).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
     const totalValueCorn = totalValueFormated
